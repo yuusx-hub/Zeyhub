@@ -1,0 +1,181 @@
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local player = Players.LocalPlayer
+local backpack = player:WaitForChild("Backpack")
+local TOOL_NAME = "Bat" -- change this to wahtever tool you want
+local EQUIP_SPEED = 0.1
+
+local tool = backpack:FindFirstChild(TOOL_NAME)
+if not tool or not tool:IsA("Tool") then
+    warn(TOOL_NAME .. " not found in Backpack!")
+    return
+end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FPSDevourerGui"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = CoreGui
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 220, 0, 90)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+frame.BorderSizePixel = 2
+frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+frame.Active = true
+frame.Parent = screenGui
+
+local titleBar = Instance.new("Frame")
+titleBar.Name = "TitleBar"
+titleBar.Size = UDim2.new(1, 0, 0, 30)
+titleBar.Position = UDim2.new(0, 0, 0, 0)
+titleBar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+titleBar.BorderSizePixel = 0
+titleBar.Parent = frame
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, -10, 1, 0)
+title.Position = UDim2.new(0, 5, 0, 0)
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.fromRGB(255, 100, 100)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 14
+title.Text = "zzzz's devourer"
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Parent = titleBar
+
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(1, -10, 0, 30)
+button.Position = UDim2.new(0, 5, 0, 35)
+button.BackgroundColor3 = Color3.fromRGB(100, 0, 0)
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.Font = Enum.Font.GothamBold
+button.TextSize = 16
+button.Text = "fps devourer: OFF"
+button.Parent = frame
+
+local speedLabel = Instance.new("TextLabel")
+speedLabel.Size = UDim2.new(1, -10, 0, 20)
+speedLabel.Position = UDim2.new(0, 5, 0, 65)
+speedLabel.BackgroundTransparency = 1
+speedLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+speedLabel.Font = Enum.Font.Gotham
+speedLabel.TextSize = 12
+speedLabel.Text = "discord.gg/zzzzhub"
+speedLabel.Parent = frame
+
+-- Rounded corners
+Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
+Instance.new("UICorner", titleBar).CornerRadius = UDim.new(0, 8)
+Instance.new("UICorner", button).CornerRadius = UDim.new(0, 6)
+
+-- drag
+local dragging = false
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+    local delta = input.Position - dragStart
+    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+titleBar.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+titleBar.InputChanged:Connect(function(input)
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+        updateInput(input)
+    end
+end)
+
+-- ── STATE ──────────────────────────────────────────────
+local isRunning = false
+local devourTask = nil
+
+local function startDevourer()
+    if devourTask then task.cancel(devourTask) end
+    devourTask = task.spawn(function()
+        while isRunning do
+            local char = player.Character
+            if char and char:FindFirstChild("Humanoid") then
+                local hum = char.Humanoid
+                if not char:FindFirstChild(TOOL_NAME) then
+                    hum:EquipTool(tool)
+                else
+                    hum:UnequipTools()
+                end
+            end
+            task.wait(EQUIP_SPEED)
+        end
+    end)
+end
+
+local function stopDevourer()
+    isRunning = false
+    if devourTask then
+        task.cancel(devourTask)
+        devourTask = nil
+    end
+    local char = player.Character
+    if char and char:FindFirstChild("Humanoid") then
+        char.Humanoid:UnequipTools()
+    end
+end
+
+button.MouseButton1Click:Connect(function()
+    isRunning = not isRunning
+    if isRunning then
+        button.Text = "fps devourer: ON"
+        button.BackgroundColor3 = Color3.fromRGB(0, 140, 0)
+        startDevourer()
+    else
+        button.Text = "fps devourer: OFF"
+        button.BackgroundColor3 = Color3.fromRGB(100, 0, 0)
+        stopDevourer()
+    end
+end)
+
+local speeds = {0.07, 0.08, 0.09, 0.1, 0.2, 0.5}
+local speedIndex = 4 -- default 0.1
+speedLabel.MouseButton1Click:Connect(function()
+    speedIndex = (speedIndex % #speeds) + 1
+    EQUIP_SPEED = speeds[speedIndex]
+    speedLabel.Text = "discord.gg/zzzzhub • Speed: " .. tostring(EQUIP_SPEED)
+end)
+
+task.spawn(function()
+    while task.wait(0.5) do
+        if isRunning and button.Parent then
+            TweenService:Create(button, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(0, 255, 0)}):Play()
+            task.wait(0.3)
+            if isRunning then
+                TweenService:Create(button, TweenInfo.new(0.3), {BackgroundColor3 = Color3.fromRGB(0, 140, 0)}):Play()
+            end
+        end
+    end
+end)
+
+player.CharacterAdded:Connect(function()
+    if not isRunning then
+        task.delay(1, function()
+            local char = player.Character
+            if char and char:FindFirstChild("Humanoid") then
+                char.Humanoid:UnequipTools()
+            end
+        end)
+    end
+end)
