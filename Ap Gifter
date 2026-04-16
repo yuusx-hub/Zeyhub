@@ -7,7 +7,7 @@ local CoreGui      = game:GetService("CoreGui")
 local player       = Players.LocalPlayer
 local playerGui    = player:WaitForChild("PlayerGui")
 
-local PlayerBalance = 492864
+local PlayerBalance = 4830479
 local ROBUX_CHAR    = utf8.char(0xE002)
 
 local function createBuyUI(itemName, itemPrice, itemImageId, giftedTo)
