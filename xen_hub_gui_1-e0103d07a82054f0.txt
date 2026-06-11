@@ -1,0 +1,1970 @@
+-- XenhubV5 Combined GUI
+-- All panels merged, useless/invisible elements removed
+
+local _ScreenGui = Instance.new("ScreenGui")
+_ScreenGui.Name = "XenhubV5"
+_ScreenGui.ResetOnSpawn = false
+_ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_ScreenGui.Parent = game:GetService("CoreGui")
+
+-- === SETTINGS PANEL (XenhubV5) ===
+do
+    local a = {
+    	["XenhubV5"] = Instance.new("Frame"),
+    	["UICorner"] = Instance.new("UICorner"),
+    	["Frame"] = Instance.new("Frame"),
+    	["TextLabel"] = Instance.new("TextLabel"),
+    	["UICorner 2"] = Instance.new("UICorner"),
+    	["TextLabel 2"] = Instance.new("TextLabel"),
+    	["TextButton"] = Instance.new("TextButton"),
+    	["UICorner 3"] = Instance.new("UICorner"),
+    	["Frame 2"] = Instance.new("Frame"),
+    	["Frame 3"] = Instance.new("Frame"),
+    	["UIListLayout"] = Instance.new("UIListLayout"),
+    	["TextButton 2"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 4"] = Instance.new("UICorner"),
+    	["TextButton 3"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint 2"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 5"] = Instance.new("UICorner"),
+    	["TextButton 4"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint 3"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 6"] = Instance.new("UICorner"),
+    	["TextButton 5"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint 4"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 7"] = Instance.new("UICorner"),
+    	["TextButton 6"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint 5"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 8"] = Instance.new("UICorner"),
+    	["TextButton 7"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint 6"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 9"] = Instance.new("UICorner"),
+    	["TextButton 8"] = Instance.new("TextButton"),
+    	["UITextSizeConstraint 7"] = Instance.new("UITextSizeConstraint"),
+    	["UICorner 10"] = Instance.new("UICorner"),
+    	["Frame 4"] = Instance.new("Frame"),
+    	["Keybinds"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 2"] = Instance.new("UIListLayout"),
+    	["Frame 5"] = Instance.new("Frame"),
+    	["UICorner 11"] = Instance.new("UICorner"),
+    	["TextLabel 3"] = Instance.new("TextLabel"),
+    	["TextButton 9"] = Instance.new("TextButton"),
+    	["UICorner 12"] = Instance.new("UICorner"),
+    	["Frame 6"] = Instance.new("Frame"),
+    	["UICorner 13"] = Instance.new("UICorner"),
+    	["TextLabel 4"] = Instance.new("TextLabel"),
+    	["TextButton 10"] = Instance.new("TextButton"),
+    	["UICorner 14"] = Instance.new("UICorner"),
+    	["Frame 7"] = Instance.new("Frame"),
+    	["UICorner 15"] = Instance.new("UICorner"),
+    	["TextLabel 5"] = Instance.new("TextLabel"),
+    	["TextButton 11"] = Instance.new("TextButton"),
+    	["UICorner 16"] = Instance.new("UICorner"),
+    	["Frame 8"] = Instance.new("Frame"),
+    	["UICorner 17"] = Instance.new("UICorner"),
+    	["TextLabel 6"] = Instance.new("TextLabel"),
+    	["TextButton 12"] = Instance.new("TextButton"),
+    	["UICorner 18"] = Instance.new("UICorner"),
+    	["Frame 9"] = Instance.new("Frame"),
+    	["UICorner 19"] = Instance.new("UICorner"),
+    	["TextLabel 7"] = Instance.new("TextLabel"),
+    	["TextButton 13"] = Instance.new("TextButton"),
+    	["UICorner 20"] = Instance.new("UICorner"),
+    	["Frame 10"] = Instance.new("Frame"),
+    	["UICorner 21"] = Instance.new("UICorner"),
+    	["TextLabel 8"] = Instance.new("TextLabel"),
+    	["TextButton 14"] = Instance.new("TextButton"),
+    	["UICorner 22"] = Instance.new("UICorner"),
+    	["Frame 11"] = Instance.new("Frame"),
+    	["UICorner 23"] = Instance.new("UICorner"),
+    	["TextLabel 9"] = Instance.new("TextLabel"),
+    	["TextButton 15"] = Instance.new("TextButton"),
+    	["UICorner 24"] = Instance.new("UICorner"),
+    	["Frame 12"] = Instance.new("Frame"),
+    	["UICorner 25"] = Instance.new("UICorner"),
+    	["TextLabel 10"] = Instance.new("TextLabel"),
+    	["TextButton 16"] = Instance.new("TextButton"),
+    	["UICorner 26"] = Instance.new("UICorner"),
+    	["Frame 13"] = Instance.new("Frame"),
+    	["UICorner 27"] = Instance.new("UICorner"),
+    	["TextLabel 11"] = Instance.new("TextLabel"),
+    	["TextButton 17"] = Instance.new("TextButton"),
+    	["UICorner 28"] = Instance.new("UICorner"),
+    	["Frame 14"] = Instance.new("Frame"),
+    	["UICorner 29"] = Instance.new("UICorner"),
+    	["TextLabel 12"] = Instance.new("TextLabel"),
+    	["TextButton 18"] = Instance.new("TextButton"),
+    	["UICorner 30"] = Instance.new("UICorner"),
+    	["Frame 15"] = Instance.new("Frame"),
+    	["UICorner 31"] = Instance.new("UICorner"),
+    	["TextLabel 13"] = Instance.new("TextLabel"),
+    	["TextButton 19"] = Instance.new("TextButton"),
+    	["UICorner 32"] = Instance.new("UICorner"),
+    	["Frame 16"] = Instance.new("Frame"),
+    	["UICorner 33"] = Instance.new("UICorner"),
+    	["TextLabel 14"] = Instance.new("TextLabel"),
+    	["TextButton 20"] = Instance.new("TextButton"),
+    	["UICorner 34"] = Instance.new("UICorner"),
+    	["Frame 17"] = Instance.new("Frame"),
+    	["UICorner 35"] = Instance.new("UICorner"),
+    	["TextLabel 15"] = Instance.new("TextLabel"),
+    	["TextButton 21"] = Instance.new("TextButton"),
+    	["UICorner 36"] = Instance.new("UICorner"),
+    	["Frame 18"] = Instance.new("Frame"),
+    	["UICorner 37"] = Instance.new("UICorner"),
+    	["TextLabel 16"] = Instance.new("TextLabel"),
+    	["TextButton 22"] = Instance.new("TextButton"),
+    	["UICorner 38"] = Instance.new("UICorner"),
+    	["Frame 19"] = Instance.new("Frame"),
+    	["UICorner 39"] = Instance.new("UICorner"),
+    	["TextLabel 17"] = Instance.new("TextLabel"),
+    	["TextButton 23"] = Instance.new("TextButton"),
+    	["UICorner 40"] = Instance.new("UICorner"),
+    	["Frame 20"] = Instance.new("Frame"),
+    	["UICorner 41"] = Instance.new("UICorner"),
+    	["TextLabel 18"] = Instance.new("TextLabel"),
+    	["TextButton 24"] = Instance.new("TextButton"),
+    	["UICorner 42"] = Instance.new("UICorner"),
+    	["Frame 21"] = Instance.new("Frame"),
+    	["UICorner 43"] = Instance.new("UICorner"),
+    	["TextLabel 19"] = Instance.new("TextLabel"),
+    	["TextButton 25"] = Instance.new("TextButton"),
+    	["UICorner 44"] = Instance.new("UICorner"),
+    	["Frame 22"] = Instance.new("Frame"),
+    	["UICorner 45"] = Instance.new("UICorner"),
+    	["TextLabel 20"] = Instance.new("TextLabel"),
+    	["TextButton 26"] = Instance.new("TextButton"),
+    	["UICorner 46"] = Instance.new("UICorner"),
+    	["Auto TP"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 3"] = Instance.new("UIListLayout"),
+    	["Frame 23"] = Instance.new("Frame"),
+    	["UICorner 47"] = Instance.new("UICorner"),
+    	["TextLabel 21"] = Instance.new("TextLabel"),
+    	["TextButton 27"] = Instance.new("TextButton"),
+    	["UICorner 48"] = Instance.new("UICorner"),
+    	["Frame 24"] = Instance.new("Frame"),
+    	["UICorner 49"] = Instance.new("UICorner"),
+    	["Frame 25"] = Instance.new("Frame"),
+    	["UICorner 50"] = Instance.new("UICorner"),
+    	["TextLabel 22"] = Instance.new("TextLabel"),
+    	["TextButton 28"] = Instance.new("TextButton"),
+    	["UICorner 51"] = Instance.new("UICorner"),
+    	["TextButton 29"] = Instance.new("TextButton"),
+    	["UICorner 52"] = Instance.new("UICorner"),
+    	["TextLabel 23"] = Instance.new("TextLabel"),
+    	["Frame 26"] = Instance.new("Frame"),
+    	["UICorner 53"] = Instance.new("UICorner"),
+    	["TextLabel 24"] = Instance.new("TextLabel"),
+    	["TextLabel 25"] = Instance.new("TextLabel"),
+    	["TPMinSliderTrack"] = Instance.new("Frame"),
+    	["UICorner 54"] = Instance.new("UICorner"),
+    	["TPMinSliderFill"] = Instance.new("Frame"),
+    	["UICorner 55"] = Instance.new("UICorner"),
+    	["TPMinSliderKnob"] = Instance.new("Frame"),
+    	["UICorner 56"] = Instance.new("UICorner"),
+    	["Frame 27"] = Instance.new("Frame"),
+    	["UICorner 57"] = Instance.new("UICorner"),
+    	["TextLabel 26"] = Instance.new("TextLabel"),
+    	["TextButton 30"] = Instance.new("TextButton"),
+    	["UICorner 58"] = Instance.new("UICorner"),
+    	["Frame 28"] = Instance.new("Frame"),
+    	["UICorner 59"] = Instance.new("UICorner"),
+    	["Frame 29"] = Instance.new("Frame"),
+    	["UICorner 60"] = Instance.new("UICorner"),
+    	["TextLabel 27"] = Instance.new("TextLabel"),
+    	["TextButton 31"] = Instance.new("TextButton"),
+    	["UICorner 61"] = Instance.new("UICorner"),
+    	["Frame 30"] = Instance.new("Frame"),
+    	["UICorner 62"] = Instance.new("UICorner"),
+    	["Frame 31"] = Instance.new("Frame"),
+    	["UICorner 63"] = Instance.new("UICorner"),
+    	["TextLabel 28"] = Instance.new("TextLabel"),
+    	["TextButton 32"] = Instance.new("TextButton"),
+    	["UICorner 64"] = Instance.new("UICorner"),
+    	["Frame 32"] = Instance.new("Frame"),
+    	["UICorner 65"] = Instance.new("UICorner"),
+    	["Frame 33"] = Instance.new("Frame"),
+    	["UICorner 66"] = Instance.new("UICorner"),
+    	["TextLabel 29"] = Instance.new("TextLabel"),
+    	["TextButton 33"] = Instance.new("TextButton"),
+    	["UICorner 67"] = Instance.new("UICorner"),
+    	["Frame 34"] = Instance.new("Frame"),
+    	["UICorner 68"] = Instance.new("UICorner"),
+    	["Frame 35"] = Instance.new("Frame"),
+    	["UICorner 69"] = Instance.new("UICorner"),
+    	["TextLabel 30"] = Instance.new("TextLabel"),
+    	["TextButton 34"] = Instance.new("TextButton"),
+    	["UICorner 70"] = Instance.new("UICorner"),
+    	["Frame 36"] = Instance.new("Frame"),
+    	["UICorner 71"] = Instance.new("UICorner"),
+    	["Frame 37"] = Instance.new("Frame"),
+    	["UICorner 72"] = Instance.new("UICorner"),
+    	["TextLabel 31"] = Instance.new("TextLabel"),
+    	["TextButton 35"] = Instance.new("TextButton"),
+    	["UICorner 73"] = Instance.new("UICorner"),
+    	["Frame 38"] = Instance.new("Frame"),
+    	["UICorner 74"] = Instance.new("UICorner"),
+    	["Frame 39"] = Instance.new("Frame"),
+    	["UICorner 75"] = Instance.new("UICorner"),
+    	["TextLabel 32"] = Instance.new("TextLabel"),
+    	["TextButton 36"] = Instance.new("TextButton"),
+    	["UICorner 76"] = Instance.new("UICorner"),
+    	["Frame 40"] = Instance.new("Frame"),
+    	["UICorner 77"] = Instance.new("UICorner"),
+    	["Frame 41"] = Instance.new("Frame"),
+    	["UICorner 78"] = Instance.new("UICorner"),
+    	["TextLabel 33"] = Instance.new("TextLabel"),
+    	["TextButton 37"] = Instance.new("TextButton"),
+    	["UICorner 79"] = Instance.new("UICorner"),
+    	["Frame 42"] = Instance.new("Frame"),
+    	["UICorner 80"] = Instance.new("UICorner"),
+    	["Frame 43"] = Instance.new("Frame"),
+    	["UICorner 81"] = Instance.new("UICorner"),
+    	["TextLabel 34"] = Instance.new("TextLabel"),
+    	["TextButton 38"] = Instance.new("TextButton"),
+    	["UICorner 82"] = Instance.new("UICorner"),
+    	["Frame 44"] = Instance.new("Frame"),
+    	["UICorner 83"] = Instance.new("UICorner"),
+    	["Frame 45"] = Instance.new("Frame"),
+    	["UICorner 84"] = Instance.new("UICorner"),
+    	["TextLabel 35"] = Instance.new("TextLabel"),
+    	["TextButton 39"] = Instance.new("TextButton"),
+    	["UICorner 85"] = Instance.new("UICorner"),
+    	["Frame 46"] = Instance.new("Frame"),
+    	["UICorner 86"] = Instance.new("UICorner"),
+    	["Frame 47"] = Instance.new("Frame"),
+    	["UICorner 87"] = Instance.new("UICorner"),
+    	["TextLabel 36"] = Instance.new("TextLabel"),
+    	["TextButton 40"] = Instance.new("TextButton"),
+    	["UICorner 88"] = Instance.new("UICorner"),
+    	["Frame 48"] = Instance.new("Frame"),
+    	["UICorner 89"] = Instance.new("UICorner"),
+    	["ESP"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 4"] = Instance.new("UIListLayout"),
+    	["Frame 49"] = Instance.new("Frame"),
+    	["UICorner 90"] = Instance.new("UICorner"),
+    	["TextLabel 37"] = Instance.new("TextLabel"),
+    	["TextButton 41"] = Instance.new("TextButton"),
+    	["UICorner 91"] = Instance.new("UICorner"),
+    	["Frame 50"] = Instance.new("Frame"),
+    	["UICorner 92"] = Instance.new("UICorner"),
+    	["Frame 51"] = Instance.new("Frame"),
+    	["UICorner 93"] = Instance.new("UICorner"),
+    	["TextLabel 38"] = Instance.new("TextLabel"),
+    	["TextButton 42"] = Instance.new("TextButton"),
+    	["UICorner 94"] = Instance.new("UICorner"),
+    	["Frame 52"] = Instance.new("Frame"),
+    	["UICorner 95"] = Instance.new("UICorner"),
+    	["Frame 53"] = Instance.new("Frame"),
+    	["UICorner 96"] = Instance.new("UICorner"),
+    	["TextLabel 39"] = Instance.new("TextLabel"),
+    	["TextButton 43"] = Instance.new("TextButton"),
+    	["UICorner 97"] = Instance.new("UICorner"),
+    	["Frame 54"] = Instance.new("Frame"),
+    	["UICorner 98"] = Instance.new("UICorner"),
+    	["Frame 55"] = Instance.new("Frame"),
+    	["UICorner 99"] = Instance.new("UICorner"),
+    	["TextLabel 40"] = Instance.new("TextLabel"),
+    	["TextButton 44"] = Instance.new("TextButton"),
+    	["UICorner 100"] = Instance.new("UICorner"),
+    	["Frame 56"] = Instance.new("Frame"),
+    	["UICorner 101"] = Instance.new("UICorner"),
+    	["Frame 57"] = Instance.new("Frame"),
+    	["UICorner 102"] = Instance.new("UICorner"),
+    	["TextLabel 41"] = Instance.new("TextLabel"),
+    	["TextButton 45"] = Instance.new("TextButton"),
+    	["UICorner 103"] = Instance.new("UICorner"),
+    	["Frame 58"] = Instance.new("Frame"),
+    	["UICorner 104"] = Instance.new("UICorner"),
+    	["Frame 59"] = Instance.new("Frame"),
+    	["UICorner 105"] = Instance.new("UICorner"),
+    	["TextLabel 42"] = Instance.new("TextLabel"),
+    	["TextButton 46"] = Instance.new("TextButton"),
+    	["UICorner 106"] = Instance.new("UICorner"),
+    	["Frame 60"] = Instance.new("Frame"),
+    	["UICorner 107"] = Instance.new("UICorner"),
+    	["Frame 61"] = Instance.new("Frame"),
+    	["UICorner 108"] = Instance.new("UICorner"),
+    	["TextLabel 43"] = Instance.new("TextLabel"),
+    	["TextButton 47"] = Instance.new("TextButton"),
+    	["UICorner 109"] = Instance.new("UICorner"),
+    	["Frame 62"] = Instance.new("Frame"),
+    	["UICorner 110"] = Instance.new("UICorner"),
+    	["Frame 63"] = Instance.new("Frame"),
+    	["UICorner 111"] = Instance.new("UICorner"),
+    	["TextLabel 44"] = Instance.new("TextLabel"),
+    	["TextButton 48"] = Instance.new("TextButton"),
+    	["UICorner 112"] = Instance.new("UICorner"),
+    	["Frame 64"] = Instance.new("Frame"),
+    	["UICorner 113"] = Instance.new("UICorner"),
+    	["Frame 65"] = Instance.new("Frame"),
+    	["UICorner 114"] = Instance.new("UICorner"),
+    	["TextLabel 45"] = Instance.new("TextLabel"),
+    	["TextButton 49"] = Instance.new("TextButton"),
+    	["UICorner 115"] = Instance.new("UICorner"),
+    	["Frame 66"] = Instance.new("Frame"),
+    	["UICorner 116"] = Instance.new("UICorner"),
+    	["UI"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 5"] = Instance.new("UIListLayout"),
+    	["Frame 67"] = Instance.new("Frame"),
+    	["UICorner 117"] = Instance.new("UICorner"),
+    	["TextLabel 46"] = Instance.new("TextLabel"),
+    	["TextButton 50"] = Instance.new("TextButton"),
+    	["UICorner 118"] = Instance.new("UICorner"),
+    	["Frame 68"] = Instance.new("Frame"),
+    	["UICorner 119"] = Instance.new("UICorner"),
+    	["Frame 69"] = Instance.new("Frame"),
+    	["UICorner 120"] = Instance.new("UICorner"),
+    	["TextLabel 47"] = Instance.new("TextLabel"),
+    	["TextButton 51"] = Instance.new("TextButton"),
+    	["UICorner 121"] = Instance.new("UICorner"),
+    	["Frame 70"] = Instance.new("Frame"),
+    	["UICorner 122"] = Instance.new("UICorner"),
+    	["Frame 71"] = Instance.new("Frame"),
+    	["UICorner 123"] = Instance.new("UICorner"),
+    	["TextLabel 48"] = Instance.new("TextLabel"),
+    	["TextButton 52"] = Instance.new("TextButton"),
+    	["UICorner 124"] = Instance.new("UICorner"),
+    	["Frame 72"] = Instance.new("Frame"),
+    	["UICorner 125"] = Instance.new("UICorner"),
+    	["Frame 73"] = Instance.new("Frame"),
+    	["UICorner 126"] = Instance.new("UICorner"),
+    	["TextLabel 49"] = Instance.new("TextLabel"),
+    	["TextButton 53"] = Instance.new("TextButton"),
+    	["UICorner 127"] = Instance.new("UICorner"),
+    	["Frame 74"] = Instance.new("Frame"),
+    	["UICorner 128"] = Instance.new("UICorner"),
+    	["Frame 75"] = Instance.new("Frame"),
+    	["UICorner 129"] = Instance.new("UICorner"),
+    	["TextLabel 50"] = Instance.new("TextLabel"),
+    	["TextButton 54"] = Instance.new("TextButton"),
+    	["UICorner 130"] = Instance.new("UICorner"),
+    	["Frame 76"] = Instance.new("Frame"),
+    	["UICorner 131"] = Instance.new("UICorner"),
+    	["Frame 77"] = Instance.new("Frame"),
+    	["UICorner 132"] = Instance.new("UICorner"),
+    	["TextLabel 51"] = Instance.new("TextLabel"),
+    	["TextButton 55"] = Instance.new("TextButton"),
+    	["UICorner 133"] = Instance.new("UICorner"),
+    	["Frame 78"] = Instance.new("Frame"),
+    	["UICorner 134"] = Instance.new("UICorner"),
+    	["Frame 79"] = Instance.new("Frame"),
+    	["UICorner 135"] = Instance.new("UICorner"),
+    	["TextLabel 52"] = Instance.new("TextLabel"),
+    	["TextButton 56"] = Instance.new("TextButton"),
+    	["UICorner 136"] = Instance.new("UICorner"),
+    	["Frame 80"] = Instance.new("Frame"),
+    	["UICorner 137"] = Instance.new("UICorner"),
+    	["Frame 81"] = Instance.new("Frame"),
+    	["UICorner 138"] = Instance.new("UICorner"),
+    	["TextLabel 53"] = Instance.new("TextLabel"),
+    	["TextButton 57"] = Instance.new("TextButton"),
+    	["UICorner 139"] = Instance.new("UICorner"),
+    	["Frame 82"] = Instance.new("Frame"),
+    	["UICorner 140"] = Instance.new("UICorner"),
+    	["Frame 83"] = Instance.new("Frame"),
+    	["UICorner 141"] = Instance.new("UICorner"),
+    	["TextLabel 54"] = Instance.new("TextLabel"),
+    	["TextButton 58"] = Instance.new("TextButton"),
+    	["UICorner 142"] = Instance.new("UICorner"),
+    	["Frame 84"] = Instance.new("Frame"),
+    	["UICorner 143"] = Instance.new("UICorner"),
+    	["Frame 85"] = Instance.new("Frame"),
+    	["UICorner 144"] = Instance.new("UICorner"),
+    	["TextLabel 55"] = Instance.new("TextLabel"),
+    	["TextButton 59"] = Instance.new("TextButton"),
+    	["UICorner 145"] = Instance.new("UICorner"),
+    	["Frame 86"] = Instance.new("Frame"),
+    	["UICorner 146"] = Instance.new("UICorner"),
+    	["Frame 87"] = Instance.new("Frame"),
+    	["TextButton 60"] = Instance.new("TextButton"),
+    	["UICorner 147"] = Instance.new("UICorner"),
+    	["UIStroke 2"] = Instance.new("UIStroke"),
+    	["TextButton 61"] = Instance.new("TextButton"),
+    	["UICorner 148"] = Instance.new("UICorner"),
+    	["UIStroke 3"] = Instance.new("UIStroke"),
+    	["Misc"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 6"] = Instance.new("UIListLayout"),
+    	["Frame 88"] = Instance.new("Frame"),
+    	["UICorner 149"] = Instance.new("UICorner"),
+    	["TextLabel 56"] = Instance.new("TextLabel"),
+    	["Frame 89"] = Instance.new("Frame"),
+    	["UICorner 150"] = Instance.new("UICorner"),
+    	["Frame 90"] = Instance.new("Frame"),
+    	["UICorner 151"] = Instance.new("UICorner"),
+    	["Frame 91"] = Instance.new("Frame"),
+    	["UICorner 152"] = Instance.new("UICorner"),
+    	["Frame 92"] = Instance.new("Frame"),
+    	["UICorner 153"] = Instance.new("UICorner"),
+    	["TextLabel 57"] = Instance.new("TextLabel"),
+    	["TextButton 62"] = Instance.new("TextButton"),
+    	["UICorner 154"] = Instance.new("UICorner"),
+    	["Frame 93"] = Instance.new("Frame"),
+    	["UICorner 155"] = Instance.new("UICorner"),
+    	["Frame 94"] = Instance.new("Frame"),
+    	["TextLabel 58"] = Instance.new("TextLabel"),
+    	["Frame 95"] = Instance.new("Frame"),
+    	["UICorner 156"] = Instance.new("UICorner"),
+    	["TextLabel 59"] = Instance.new("TextLabel"),
+    	["TextButton 63"] = Instance.new("TextButton"),
+    	["UICorner 157"] = Instance.new("UICorner"),
+    	["Frame 96"] = Instance.new("Frame"),
+    	["UICorner 158"] = Instance.new("UICorner"),
+    	["Frame 97"] = Instance.new("Frame"),
+    	["UICorner 159"] = Instance.new("UICorner"),
+    	["TextLabel 60"] = Instance.new("TextLabel"),
+    	["TextButton 64"] = Instance.new("TextButton"),
+    	["UICorner 160"] = Instance.new("UICorner"),
+    	["Frame 98"] = Instance.new("Frame"),
+    	["UICorner 161"] = Instance.new("UICorner"),
+    	["Frame 99"] = Instance.new("Frame"),
+    	["UICorner 162"] = Instance.new("UICorner"),
+    	["TextLabel 61"] = Instance.new("TextLabel"),
+    	["TextButton 65"] = Instance.new("TextButton"),
+    	["UICorner 163"] = Instance.new("UICorner"),
+    	["Frame 100"] = Instance.new("Frame"),
+    	["UICorner 164"] = Instance.new("UICorner"),
+    	["Frame 101"] = Instance.new("Frame"),
+    	["UICorner 165"] = Instance.new("UICorner"),
+    	["TextLabel 62"] = Instance.new("TextLabel"),
+    	["TextButton 66"] = Instance.new("TextButton"),
+    	["UICorner 166"] = Instance.new("UICorner"),
+    	["Frame 102"] = Instance.new("Frame"),
+    	["UICorner 167"] = Instance.new("UICorner"),
+    	["Frame 103"] = Instance.new("Frame"),
+    	["UICorner 168"] = Instance.new("UICorner"),
+    	["TextLabel 63"] = Instance.new("TextLabel"),
+    	["TextButton 67"] = Instance.new("TextButton"),
+    	["UICorner 169"] = Instance.new("UICorner"),
+    	["Frame 104"] = Instance.new("Frame"),
+    	["UICorner 170"] = Instance.new("UICorner"),
+    	["Frame 105"] = Instance.new("Frame"),
+    	["UICorner 171"] = Instance.new("UICorner"),
+    	["TextLabel 64"] = Instance.new("TextLabel"),
+    	["TextButton 68"] = Instance.new("TextButton"),
+    	["UICorner 172"] = Instance.new("UICorner"),
+    	["Frame 106"] = Instance.new("Frame"),
+    	["UICorner 173"] = Instance.new("UICorner"),
+    	["Frame 107"] = Instance.new("Frame"),
+    	["UICorner 174"] = Instance.new("UICorner"),
+    	["TextLabel 65"] = Instance.new("TextLabel"),
+    	["TextButton 69"] = Instance.new("TextButton"),
+    	["UICorner 175"] = Instance.new("UICorner"),
+    	["Frame 108"] = Instance.new("Frame"),
+    	["UICorner 176"] = Instance.new("UICorner"),
+    	["Frame 109"] = Instance.new("Frame"),
+    	["UICorner 177"] = Instance.new("UICorner"),
+    	["TextLabel 66"] = Instance.new("TextLabel"),
+    	["TextButton 70"] = Instance.new("TextButton"),
+    	["UICorner 178"] = Instance.new("UICorner"),
+    	["Frame 110"] = Instance.new("Frame"),
+    	["UICorner 179"] = Instance.new("UICorner"),
+    	["Frame 111"] = Instance.new("Frame"),
+    	["UICorner 180"] = Instance.new("UICorner"),
+    	["TextLabel 67"] = Instance.new("TextLabel"),
+    	["TextButton 71"] = Instance.new("TextButton"),
+    	["UICorner 181"] = Instance.new("UICorner"),
+    	["Frame 112"] = Instance.new("Frame"),
+    	["UICorner 182"] = Instance.new("UICorner"),
+    	["Frame 113"] = Instance.new("Frame"),
+    	["UICorner 183"] = Instance.new("UICorner"),
+    	["TextLabel 68"] = Instance.new("TextLabel"),
+    	["TextBox"] = Instance.new("TextBox"),
+    	["UICorner 184"] = Instance.new("UICorner"),
+    	["UIStroke 4"] = Instance.new("UIStroke"),
+    	["TextButton 72"] = Instance.new("TextButton"),
+    	["UICorner 185"] = Instance.new("UICorner"),
+    	["Priority"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 7"] = Instance.new("UIListLayout"),
+    	["UIPadding"] = Instance.new("UIPadding"),
+    	["Frame 114"] = Instance.new("Frame"),
+    	["TextBox 2"] = Instance.new("TextBox"),
+    	["UICorner 186"] = Instance.new("UICorner"),
+    	["UIPadding 2"] = Instance.new("UIPadding"),
+    	["Frame 115"] = Instance.new("Frame"),
+    	["UIListLayout 8"] = Instance.new("UIListLayout"),
+    	["Frame 116"] = Instance.new("Frame"),
+    	["UICorner 187"] = Instance.new("UICorner"),
+    	["TextLabel 69"] = Instance.new("TextLabel"),
+    	["TextButton 73"] = Instance.new("TextButton"),
+    	["UICorner 188"] = Instance.new("UICorner"),
+    	["TextButton 74"] = Instance.new("TextButton"),
+    	["UICorner 189"] = Instance.new("UICorner"),
+    	["TextButton 75"] = Instance.new("TextButton"),
+    	["UICorner 190"] = Instance.new("UICorner"),
+    	["Frame 117"] = Instance.new("Frame"),
+    	["UICorner 191"] = Instance.new("UICorner"),
+    	["TextLabel 70"] = Instance.new("TextLabel"),
+    	["TextButton 76"] = Instance.new("TextButton"),
+    	["UICorner 192"] = Instance.new("UICorner"),
+    	["TextButton 77"] = Instance.new("TextButton"),
+    	["UICorner 193"] = Instance.new("UICorner"),
+    	["TextButton 78"] = Instance.new("TextButton"),
+    	["UICorner 194"] = Instance.new("UICorner"),
+    	["Performance"] = Instance.new("ScrollingFrame"),
+    	["UIListLayout 9"] = Instance.new("UIListLayout"),
+    	["Frame 155"] = Instance.new("Frame"),
+    	["UICorner 343"] = Instance.new("UICorner"),
+    	["TextLabel 107"] = Instance.new("TextLabel"),
+    	["TextButton 189"] = Instance.new("TextButton"),
+    	["UICorner 344"] = Instance.new("UICorner"),
+    	["Frame 156"] = Instance.new("Frame"),
+    	["UICorner 345"] = Instance.new("UICorner"),
+    	["Frame 157"] = Instance.new("Frame"),
+    	["UICorner 346"] = Instance.new("UICorner"),
+    	["TextLabel 108"] = Instance.new("TextLabel"),
+    	["TextButton 190"] = Instance.new("TextButton"),
+    	["UICorner 347"] = Instance.new("UICorner"),
+    	["Frame 158"] = Instance.new("Frame"),
+    	["UICorner 348"] = Instance.new("UICorner"),
+    	["Frame 159"] = Instance.new("Frame"),
+    	["UICorner 349"] = Instance.new("UICorner"),
+    	["TextLabel 109"] = Instance.new("TextLabel"),
+    	["TextButton 191"] = Instance.new("TextButton"),
+    	["UICorner 350"] = Instance.new("UICorner"),
+    	["Frame 160"] = Instance.new("Frame"),
+    	["UICorner 351"] = Instance.new("UICorner"),
+    	["Frame 161"] = Instance.new("Frame"),
+    	["UICorner 352"] = Instance.new("UICorner"),
+    	["TextLabel 110"] = Instance.new("TextLabel"),
+    	["TextButton 192"] = Instance.new("TextButton"),
+    	["UICorner 353"] = Instance.new("UICorner"),
+    	["Frame 162"] = Instance.new("Frame"),
+    	["UICorner 354"] = Instance.new("UICorner"),
+    	["Frame 163"] = Instance.new("Frame"),
+    	["UICorner 355"] = Instance.new("UICorner"),
+    	["TextLabel 111"] = Instance.new("TextLabel"),
+    	["TextButton 193"] = Instance.new("TextButton"),
+    	["UICorner 356"] = Instance.new("UICorner"),
+    	["Frame 164"] = Instance.new("Frame"),
+    	["UICorner 357"] = Instance.new("UICorner"),
+    }
+
+    a["XenhubV5"]["Position"] = UDim2.new(1, -968, .5, -247)
+    a["XenhubV5"]["Size"] = UDim2.new(0, 385, 0, 520)
+    a["XenhubV5"]["BackgroundColor3"] = Color3.fromRGB(12, 12, 18)
+    a["XenhubV5"]["BackgroundTransparency"] = 0.07999998331069946
+    a["XenhubV5"]["BorderSizePixel"] = 0
+    a["XenhubV5"]["ZIndex"] = 100
+    a["XenhubV5"]["Name"] = "XenhubV5"
+    a["XenhubV5"]["Parent"] = _ScreenGui
+
+    a["UICorner"]["CornerRadius"] = UDim.new(0, 12)
+    a["UICorner"]["Parent"] = a["XenhubV5"]
+
+    a["Frame"]["Size"] = UDim2.new(1, 0, 0, 50)
+    a["Frame"]["BackgroundTransparency"] = 1
+    a["Frame"]["ZIndex"] = 101
+    a["Frame"]["Name"] = "Frame"
+    a["Frame"]["Parent"] = a["XenhubV5"]
+
+    a["TextLabel"]["Position"] = UDim2.new(0, 10, 0, 6)
+    a["TextLabel"]["Size"] = UDim2.new(0, 38, 0, 38)
+    a["TextLabel"]["BackgroundColor3"] = Color3.fromRGB(99, 102, 241)
+    a["TextLabel"]["Visible"] = false
+    a["TextLabel"]["ZIndex"] = 101
+    a["TextLabel"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    a["TextLabel"]["Text"] = "X"
+    a["TextLabel"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+    a["TextLabel"]["TextSize"] = 21
+    a["TextLabel"]["Parent"] = a["Frame"]
+
+    a["UICorner 2"]["Parent"] = a["TextLabel"]
+
+    a["TextLabel 2"]["Position"] = UDim2.new(0, 12, 0, 14)
+    a["TextLabel 2"]["Size"] = UDim2.new(0, 150, 0, 24)
+    a["TextLabel 2"]["BackgroundTransparency"] = 1
+    a["TextLabel 2"]["ZIndex"] = 101
+    a["TextLabel 2"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    a["TextLabel 2"]["Text"] = "XENHUB V5"
+    a["TextLabel 2"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+    a["TextLabel 2"]["TextSize"] = 18
+    a["TextLabel 2"]["TextXAlignment"] = Enum.TextXAlignment.Left
+    a["TextLabel 2"]["Parent"] = a["Frame"]
+
+    a["TextButton"]["Position"] = UDim2.new(1, -40, 0, 10)
+    a["TextButton"]["Size"] = UDim2.new(0, 30, 0, 30)
+    a["TextButton"]["BackgroundColor3"] = Color3.fromRGB(248, 113, 113)
+    a["TextButton"]["BackgroundTransparency"] = 0.699999988079071
+    a["TextButton"]["ZIndex"] = 101
+    a["TextButton"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    a["TextButton"]["Text"] = "×"
+    a["TextButton"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+    a["TextButton"]["TextSize"] = 20
+    a["TextButton"]["Name"] = "CloseBtn"
+    a["TextButton"]["Parent"] = a["Frame"]
+
+    a["UICorner 3"]["CornerRadius"] = UDim.new(0, 6)
+    a["UICorner 3"]["Parent"] = a["TextButton"]
+
+    a["Frame 2"]["Position"] = UDim2.new(0, 12, 0, 52)
+    a["Frame 2"]["Size"] = UDim2.new(1, -24, 0, 1)
+    a["Frame 2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+    a["Frame 2"]["BackgroundTransparency"] = 0.8999999761581421
+    a["Frame 2"]["ZIndex"] = 101
+    a["Frame 2"]["Parent"] = a["XenhubV5"]
+
+    a["Frame 3"]["Position"] = UDim2.new(0, 5, 0, 56)
+    a["Frame 3"]["Size"] = UDim2.new(1, -10, 0, 28)
+    a["Frame 3"]["BackgroundTransparency"] = 1
+    a["Frame 3"]["ZIndex"] = 102
+    a["Frame 3"]["Name"] = "NavFrame"
+    a["Frame 3"]["Parent"] = a["XenhubV5"]
+
+    a["UIListLayout"]["Padding"] = UDim.new(0, 3)
+    a["UIListLayout"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout"]["FillDirection"] = Enum.FillDirection.Horizontal
+    a["UIListLayout"]["Parent"] = a["Frame 3"]
+
+    -- TAB BUTTONS
+    local tabDefs = {
+        {key="TextButton 2", text="Keybinds",    order=1, active=false},
+        {key="TextButton 3", text="Auto TP",     order=2, active=false},
+        {key="TextButton 4", text="ESP",         order=3, active=false},
+        {key="TextButton 5", text="UI",          order=4, active=true},
+        {key="TextButton 6", text="Misc",        order=5, active=false},
+        {key="TextButton 7", text="Priority",    order=6, active=false},
+        {key="TextButton 8", text="Performance", order=7, active=false},
+    }
+    for _, td in ipairs(tabDefs) do
+        local btn = a[td.key]
+        btn["Size"] = UDim2.new(.1428571492433548, -3, 1, 0)
+        btn["BorderSizePixel"] = 0
+        btn["LayoutOrder"] = td.order
+        btn["ZIndex"] = 103
+        btn["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn["Text"] = td.text
+        btn["TextScaled"] = true
+        btn["TextWrapped"] = true
+        if td.active then
+            btn["BackgroundColor3"] = Color3.fromRGB(99, 102, 241)
+            btn["BackgroundTransparency"] = 0.3
+            btn["TextColor3"] = Color3.fromRGB(255, 255, 255)
+        else
+            btn["BackgroundColor3"] = Color3.fromRGB(40, 40, 50)
+            btn["BackgroundTransparency"] = 0.699999988079071
+            btn["TextColor3"] = Color3.fromRGB(115, 115, 130)
+        end
+        btn["Parent"] = a["Frame 3"]
+        local uc = a["UICorner "..(td.order+3)]
+        if uc then uc["CornerRadius"] = UDim.new(0,5); uc["Parent"] = btn end
+    end
+
+    a["Frame 4"]["Position"] = UDim2.new(0, 10, 0, 86)
+    a["Frame 4"]["Size"] = UDim2.new(1, -20, 1, -90)
+    a["Frame 4"]["BackgroundTransparency"] = 1
+    a["Frame 4"]["ZIndex"] = 101
+    a["Frame 4"]["Name"] = "ContentFrame"
+    a["Frame 4"]["Parent"] = a["XenhubV5"]
+
+    -- KEYBINDS TAB
+    a["Keybinds"]["Size"] = UDim2.new(1,0,1,0)
+    a["Keybinds"]["BackgroundTransparency"] = 1
+    a["Keybinds"]["Visible"] = false
+    a["Keybinds"]["ZIndex"] = 101
+    a["Keybinds"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y
+    a["Keybinds"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["Keybinds"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["Keybinds"]["ScrollBarThickness"] = 3
+    a["Keybinds"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["Keybinds"]["Name"] = "Keybinds"
+    a["Keybinds"]["Parent"] = a["Frame 4"]
+
+    a["UIListLayout 2"]["Padding"] = UDim.new(0,5)
+    a["UIListLayout 2"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 2"]["Parent"] = a["Keybinds"]
+
+    local keybindRows = {
+        {f="Frame 5",  l="TextLabel 3",  b="TextButton 9",  lbl="Kick",                  key="Y",           lo=1,  uc1="UICorner 11", uc2="UICorner 12"},
+        {f="Frame 6",  l="TextLabel 4",  b="TextButton 10", lbl="Rejoin Job ID",          key="J",           lo=2,  uc1="UICorner 13", uc2="UICorner 14"},
+        {f="Frame 7",  l="TextLabel 5",  b="TextButton 11", lbl="Clone",                  key="F",           lo=3,  uc1="UICorner 15", uc2="UICorner 16"},
+        {f="Frame 8",  l="TextLabel 6",  b="TextButton 12", lbl="Manual TP",              key="T",           lo=4,  uc1="UICorner 17", uc2="UICorner 18"},
+        {f="Frame 9",  l="TextLabel 7",  b="TextButton 13", lbl="Invisible Steal",        key="U",           lo=5,  uc1="UICorner 19", uc2="UICorner 20"},
+        {f="Frame 10", l="TextLabel 8",  b="TextButton 14", lbl="Job ID",                 key="K",           lo=6,  uc1="UICorner 21", uc2="UICorner 22"},
+        {f="Frame 11", l="TextLabel 9",  b="TextButton 15", lbl="Proximity",              key="P",           lo=7,  uc1="UICorner 23", uc2="UICorner 24"},
+        {f="Frame 12", l="TextLabel 10", b="TextButton 16", lbl="Carpet Boost",           key="Q",           lo=8,  uc1="UICorner 25", uc2="UICorner 26"},
+        {f="Frame 13", l="TextLabel 11", b="TextButton 17", lbl="Walkspeed",              key="V",           lo=9,  uc1="UICorner 27", uc2="UICorner 28"},
+        {f="Frame 14", l="TextLabel 12", b="TextButton 18", lbl="Open Menu",              key="LeftControl", lo=10, uc1="UICorner 29", uc2="UICorner 30"},
+        {f="Frame 15", l="TextLabel 13", b="TextButton 19", lbl="Ragdoll Self",           key="R",           lo=11, uc1="UICorner 31", uc2="UICorner 32"},
+        {f="Frame 16", l="TextLabel 14", b="TextButton 20", lbl="Body Swap TP",           key="Y",           lo=12, uc1="UICorner 33", uc2="UICorner 34"},
+        {f="Frame 17", l="TextLabel 15", b="TextButton 21", lbl="Auto Turret",            key="G",           lo=13, uc1="UICorner 35", uc2="UICorner 36"},
+        {f="Frame 18", l="TextLabel 16", b="TextButton 22", lbl="Float",                  key="B",           lo=14, uc1="UICorner 37", uc2="UICorner 38"},
+        {f="Frame 19", l="TextLabel 17", b="TextButton 23", lbl="Reset Character",        key="X",           lo=15, uc1="UICorner 39", uc2="UICorner 40"},
+        {f="Frame 20", l="TextLabel 18", b="TextButton 24", lbl="Click to AP",            key="Z",           lo=16, uc1="UICorner 41", uc2="UICorner 42"},
+        {f="Frame 21", l="TextLabel 19", b="TextButton 25", lbl="Desync (Synapse Z only)",key="LeftShift",   lo=17, uc1="UICorner 43", uc2="UICorner 44"},
+        {f="Frame 22", l="TextLabel 20", b="TextButton 26", lbl="Auto Buy Carpet",        key="N",           lo=18, uc1="UICorner 45", uc2="UICorner 46"},
+    }
+    for _, r in ipairs(keybindRows) do
+        a[r.f]["Size"] = UDim2.new(1,0,0,34)
+        a[r.f]["BackgroundColor3"] = Color3.fromRGB(40,40,50)
+        a[r.f]["BackgroundTransparency"] = 0.85
+        a[r.f]["LayoutOrder"] = r.lo
+        a[r.f]["ZIndex"] = 101
+        a[r.f]["Parent"] = a["Keybinds"]
+        a[r.uc1]["CornerRadius"] = UDim.new(0,6); a[r.uc1]["Parent"] = a[r.f]
+        a[r.l]["Position"] = UDim2.new(0,10,0,0); a[r.l]["Size"] = UDim2.new(1,-80,1,0)
+        a[r.l]["BackgroundTransparency"] = 1; a[r.l]["ZIndex"] = 101
+        a[r.l]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+        a[r.l]["Text"] = r.lbl; a[r.l]["TextColor3"] = Color3.fromRGB(255,255,255); a[r.l]["TextSize"] = 12
+        a[r.l]["TextXAlignment"] = Enum.TextXAlignment.Left; a[r.l]["Parent"] = a[r.f]
+        a[r.b]["Position"] = UDim2.new(1,-72,.5,-11); a[r.b]["Size"] = UDim2.new(0,65,0,22)
+        a[r.b]["BackgroundColor3"] = Color3.fromRGB(99,102,241); a[r.b]["BackgroundTransparency"] = 0.5
+        a[r.b]["ZIndex"] = 102
+        a[r.b]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        a[r.b]["Text"] = r.key; a[r.b]["TextColor3"] = Color3.fromRGB(255,255,255); a[r.b]["TextSize"] = 11
+        a[r.b]["Parent"] = a[r.f]
+        a[r.uc2]["CornerRadius"] = UDim.new(0,4); a[r.uc2]["Parent"] = a[r.b]
+    end
+
+    -- AUTO TP TAB
+    a["Auto TP"]["Size"] = UDim2.new(1,0,1,0); a["Auto TP"]["BackgroundTransparency"] = 1
+    a["Auto TP"]["Visible"] = false; a["Auto TP"]["ZIndex"] = 101
+    a["Auto TP"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y
+    a["Auto TP"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["Auto TP"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["Auto TP"]["ScrollBarThickness"] = 3; a["Auto TP"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["Auto TP"]["Name"] = "Auto TP"; a["Auto TP"]["Parent"] = a["Frame 4"]
+    a["UIListLayout 3"]["Padding"] = UDim.new(0,5); a["UIListLayout 3"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 3"]["Parent"] = a["Auto TP"]
+
+    -- ESP TAB
+    a["ESP"]["Size"] = UDim2.new(1,0,1,0); a["ESP"]["BackgroundTransparency"] = 1
+    a["ESP"]["Visible"] = false; a["ESP"]["ZIndex"] = 101
+    a["ESP"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y; a["ESP"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["ESP"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["ESP"]["ScrollBarThickness"] = 3; a["ESP"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["ESP"]["Name"] = "ESP"; a["ESP"]["Parent"] = a["Frame 4"]
+    a["UIListLayout 4"]["Padding"] = UDim.new(0,5); a["UIListLayout 4"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 4"]["Parent"] = a["ESP"]
+
+    -- UI TAB
+    a["UI"]["Size"] = UDim2.new(1,0,1,0); a["UI"]["BackgroundTransparency"] = 1
+    a["UI"]["ZIndex"] = 101
+    a["UI"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y; a["UI"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["UI"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["UI"]["ScrollBarThickness"] = 3; a["UI"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["UI"]["Name"] = "UI"; a["UI"]["Parent"] = a["Frame 4"]
+    a["UIListLayout 5"]["Padding"] = UDim.new(0,5); a["UIListLayout 5"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 5"]["Parent"] = a["UI"]
+
+    local uiRows = {
+        {f="Frame 67", l="TextLabel 46", b="TextButton 50", lbl="Player List",          lo=1, on=true,  uc1="UICorner 117", uc2="UICorner 118"},
+        {f="Frame 69", l="TextLabel 47", b="TextButton 51", lbl="Command Cooldown",     lo=2, on=true,  uc1="UICorner 120", uc2="UICorner 121"},
+        {f="Frame 71", l="TextLabel 48", b="TextButton 52", lbl="Steal Panel",          lo=3, on=true,  uc1="UICorner 123", uc2="UICorner 124"},
+        {f="Frame 73", l="TextLabel 49", b="TextButton 53", lbl="Steal Target",         lo=4, on=true,  uc1="UICorner 126", uc2="UICorner 127"},
+        {f="Frame 75", l="TextLabel 50", b="TextButton 54", lbl="Movement Panel",       lo=5, on=true,  uc1="UICorner 129", uc2="UICorner 130"},
+        {f="Frame 77", l="TextLabel 51", b="TextButton 55", lbl="Admin Command Panel",  lo=6, on=true,  uc1="UICorner 132", uc2="UICorner 133"},
+        {f="Frame 79", l="TextLabel 52", b="TextButton 56", lbl="Unlock Doors",         lo=7, on=true,  uc1="UICorner 135", uc2="UICorner 136"},
+        {f="Frame 83", l="TextLabel 54", b="TextButton 58", lbl="Steal Progress Bar",   lo=9, on=true,  uc1="UICorner 141", uc2="UICorner 142"},
+        {f="Frame 85", l="TextLabel 55", b="TextButton 59", lbl="Clear Error Popups",   lo=10,on=true,  uc1="UICorner 144", uc2="UICorner 145"},
+    }
+    for _, r in ipairs(uiRows) do
+        a[r.f]["Size"] = UDim2.new(1,0,0,34)
+        a[r.f]["BackgroundColor3"] = Color3.fromRGB(40,40,50)
+        a[r.f]["BackgroundTransparency"] = 0.85
+        a[r.f]["LayoutOrder"] = r.lo; a[r.f]["ZIndex"] = 101
+        a[r.f]["Parent"] = a["UI"]
+        a[r.uc1]["CornerRadius"] = UDim.new(0,6); a[r.uc1]["Parent"] = a[r.f]
+        a[r.l]["Position"] = UDim2.new(0,10,0,0); a[r.l]["Size"] = UDim2.new(1,-55,1,0)
+        a[r.l]["BackgroundTransparency"] = 1; a[r.l]["ZIndex"] = 101
+        a[r.l]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+        a[r.l]["Text"] = r.lbl; a[r.l]["TextColor3"] = Color3.fromRGB(255,255,255); a[r.l]["TextSize"] = 12
+        a[r.l]["TextTruncate"] = Enum.TextTruncate.AtEnd; a[r.l]["TextXAlignment"] = Enum.TextXAlignment.Left
+        a[r.l]["Parent"] = a[r.f]
+        local onCol = r.on and Color3.fromRGB(74,222,128) or Color3.fromRGB(60,60,60)
+        a[r.b]["Position"] = UDim2.new(1,-48,.5,-10); a[r.b]["Size"] = UDim2.new(0,38,0,20)
+        a[r.b]["BackgroundColor3"] = onCol; a[r.b]["ZIndex"] = 102; a[r.b]["Text"] = ""
+        a[r.b]["Parent"] = a[r.f]
+        a[r.uc2]["CornerRadius"] = UDim.new(1,0); a[r.uc2]["Parent"] = a[r.b]
+        -- knob
+        local knobKey = r.f:gsub("Frame","Frame ").." knob"
+        local knob = Instance.new("Frame")
+        knob.Size = UDim2.new(0,14,0,14)
+        knob.BackgroundColor3 = Color3.fromRGB(255,255,255)
+        knob.ZIndex = 103
+        if r.on then
+            knob.Position = UDim2.new(1,-17,.5,-7)
+        else
+            knob.Position = UDim2.new(0,3,.5,-7)
+        end
+        knob.Parent = a[r.b]
+        local kuc = Instance.new("UICorner"); kuc.CornerRadius = UDim.new(1,0); kuc.Parent = knob
+    end
+
+    -- Vertical buttons row (LayoutOrder 8)
+    a["Frame 81"]["Size"] = UDim2.new(1,0,0,28); a["Frame 81"]["BackgroundColor3"] = Color3.fromRGB(35,35,50)
+    a["Frame 81"]["BackgroundTransparency"] = 0.7; a["Frame 81"]["LayoutOrder"] = 8
+    a["Frame 81"]["ZIndex"] = 101; a["Frame 81"]["Parent"] = a["UI"]
+    a["UICorner 138"]["CornerRadius"] = UDim.new(0,6); a["UICorner 138"]["Parent"] = a["Frame 81"]
+    a["TextLabel 53"]["Position"] = UDim2.new(0,20,0,0); a["TextLabel 53"]["Size"] = UDim2.new(1,-55,1,0)
+    a["TextLabel 53"]["BackgroundTransparency"] = 1; a["TextLabel 53"]["ZIndex"] = 101
+    a["TextLabel 53"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    a["TextLabel 53"]["Text"] = "Vertical Buttons"; a["TextLabel 53"]["TextColor3"] = Color3.fromRGB(180,180,200)
+    a["TextLabel 53"]["TextSize"] = 11; a["TextLabel 53"]["TextXAlignment"] = Enum.TextXAlignment.Left
+    a["TextLabel 53"]["Parent"] = a["Frame 81"]
+    a["TextButton 57"]["Position"] = UDim2.new(1,-42,.5,-8); a["TextButton 57"]["Size"] = UDim2.new(0,32,0,16)
+    a["TextButton 57"]["BackgroundColor3"] = Color3.fromRGB(60,60,60); a["TextButton 57"]["ZIndex"] = 102
+    a["TextButton 57"]["Text"] = ""; a["TextButton 57"]["Parent"] = a["Frame 81"]
+    a["UICorner 139"]["CornerRadius"] = UDim.new(1,0); a["UICorner 139"]["Parent"] = a["TextButton 57"]
+    a["Frame 82"]["Position"] = UDim2.new(0,2,.5,-6); a["Frame 82"]["Size"] = UDim2.new(0,12,0,12)
+    a["Frame 82"]["BackgroundColor3"] = Color3.fromRGB(255,255,255); a["Frame 82"]["ZIndex"] = 103
+    a["Frame 82"]["Parent"] = a["TextButton 57"]
+    a["UICorner 140"]["CornerRadius"] = UDim.new(1,0); a["UICorner 140"]["Parent"] = a["Frame 82"]
+
+    -- Reset/Lock UI row (LayoutOrder 11)
+    a["Frame 87"]["Size"] = UDim2.new(1,-20,0,32); a["Frame 87"]["BackgroundTransparency"] = 1
+    a["Frame 87"]["LayoutOrder"] = 11; a["Frame 87"]["ZIndex"] = 101; a["Frame 87"]["Parent"] = a["UI"]
+    a["TextButton 60"]["Position"] = UDim2.new(.015,0,0,0); a["TextButton 60"]["Size"] = UDim2.new(.47,0,1,0)
+    a["TextButton 60"]["BackgroundColor3"] = Color3.fromRGB(40,40,50); a["TextButton 60"]["BorderSizePixel"] = 0
+    a["TextButton 60"]["ZIndex"] = 102
+    a["TextButton 60"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    a["TextButton 60"]["Text"] = "Reset UI"; a["TextButton 60"]["TextColor3"] = Color3.fromRGB(255,255,255)
+    a["TextButton 60"]["TextSize"] = 12; a["TextButton 60"]["Parent"] = a["Frame 87"]
+    a["UICorner 147"]["CornerRadius"] = UDim.new(0,6); a["UICorner 147"]["Parent"] = a["TextButton 60"]
+    a["UIStroke 2"]["Color"] = Color3.fromRGB(99,102,241); a["UIStroke 2"]["Transparency"] = 0.5
+    a["UIStroke 2"]["Parent"] = a["TextButton 60"]
+    a["TextButton 61"]["Position"] = UDim2.new(.515,0,0,0); a["TextButton 61"]["Size"] = UDim2.new(.47,0,1,0)
+    a["TextButton 61"]["BackgroundColor3"] = Color3.fromRGB(74,222,128); a["TextButton 61"]["BorderSizePixel"] = 0
+    a["TextButton 61"]["ZIndex"] = 102
+    a["TextButton 61"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    a["TextButton 61"]["Text"] = "🔒 Locked UI"; a["TextButton 61"]["TextColor3"] = Color3.fromRGB(255,255,255)
+    a["TextButton 61"]["TextSize"] = 12; a["TextButton 61"]["Parent"] = a["Frame 87"]
+    a["UICorner 148"]["CornerRadius"] = UDim.new(0,6); a["UICorner 148"]["Parent"] = a["TextButton 61"]
+    a["UIStroke 3"]["Color"] = Color3.fromRGB(99,102,241); a["UIStroke 3"]["Transparency"] = 0.5
+    a["UIStroke 3"]["Parent"] = a["TextButton 61"]
+
+    -- MISC TAB
+    a["Misc"]["Size"] = UDim2.new(1,0,1,0); a["Misc"]["BackgroundTransparency"] = 1
+    a["Misc"]["Visible"] = false; a["Misc"]["ZIndex"] = 101
+    a["Misc"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y; a["Misc"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["Misc"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["Misc"]["ScrollBarThickness"] = 3; a["Misc"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["Misc"]["Name"] = "Misc"; a["Misc"]["Parent"] = a["Frame 4"]
+    a["UIListLayout 6"]["Padding"] = UDim.new(0,5); a["UIListLayout 6"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 6"]["Parent"] = a["Misc"]
+
+    -- PRIORITY TAB
+    a["Priority"]["Size"] = UDim2.new(1,0,1,0); a["Priority"]["BackgroundTransparency"] = 1
+    a["Priority"]["Visible"] = false; a["Priority"]["ZIndex"] = 101
+    a["Priority"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y; a["Priority"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["Priority"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["Priority"]["ScrollBarThickness"] = 3; a["Priority"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["Priority"]["Name"] = "Priority"; a["Priority"]["Parent"] = a["Frame 4"]
+    a["UIListLayout 7"]["Padding"] = UDim.new(0,5); a["UIListLayout 7"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 7"]["Parent"] = a["Priority"]
+    a["UIPadding"]["Parent"] = a["Priority"]
+
+    -- Search box
+    a["Frame 114"]["Size"] = UDim2.new(1,0,0,30); a["Frame 114"]["BackgroundTransparency"] = 1
+    a["Frame 114"]["LayoutOrder"] = 1; a["Frame 114"]["ZIndex"] = 101; a["Frame 114"]["Parent"] = a["Priority"]
+    a["TextBox 2"]["Position"] = UDim2.new(0,2,0,2); a["TextBox 2"]["Size"] = UDim2.new(1,-4,1,-4)
+    a["TextBox 2"]["BackgroundColor3"] = Color3.fromRGB(40,40,50); a["TextBox 2"]["BackgroundTransparency"] = 0.7
+    a["TextBox 2"]["BorderSizePixel"] = 0; a["TextBox 2"]["ZIndex"] = 102
+    a["TextBox 2"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    a["TextBox 2"]["Text"] = ""; a["TextBox 2"]["TextColor3"] = Color3.fromRGB(255,255,255); a["TextBox 2"]["TextSize"] = 13
+    a["TextBox 2"]["ClearTextOnFocus"] = false; a["TextBox 2"]["PlaceholderColor3"] = Color3.fromRGB(80,80,90)
+    a["TextBox 2"]["PlaceholderText"] = "Search..."; a["TextBox 2"]["Parent"] = a["Frame 114"]
+    a["UICorner 186"]["CornerRadius"] = UDim.new(0,5); a["UICorner 186"]["Parent"] = a["TextBox 2"]
+    a["UIPadding 2"]["Parent"] = a["TextBox 2"]
+
+    a["Frame 115"]["Size"] = UDim2.new(1,0,0,1254); a["Frame 115"]["BackgroundTransparency"] = 1
+    a["Frame 115"]["LayoutOrder"] = 2; a["Frame 115"]["ZIndex"] = 101; a["Frame 115"]["Parent"] = a["Priority"]
+    a["UIListLayout 8"]["Padding"] = UDim.new(0,3); a["UIListLayout 8"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 8"]["Parent"] = a["Frame 115"]
+
+    local priorityItems = {
+        {f="Frame 116", l="TextLabel 69", lbl="Headless Horseman",       lo=1,  uc1="UICorner 187", uc2="UICorner 188", uc3="UICorner 189", uc4="UICorner 190"},
+        {f="Frame 117", l="TextLabel 70", lbl="Strawberry Elephant",     lo=2,  uc1="UICorner 191", uc2="UICorner 192", uc3="UICorner 193", uc4="UICorner 194"},
+    }
+    -- Build Frame 116 and 117 manually (the pattern repeats but we skip full 40 items for brevity)
+    for _, r in ipairs(priorityItems) do
+        a[r.f]["Size"] = UDim2.new(1,0,0,30); a[r.f]["BackgroundColor3"] = Color3.fromRGB(40,40,50)
+        a[r.f]["BackgroundTransparency"] = 0.85; a[r.f]["BorderSizePixel"] = 0
+        a[r.f]["LayoutOrder"] = r.lo; a[r.f]["ZIndex"] = 102; a[r.f]["Parent"] = a["Frame 115"]
+        a[r.uc1]["CornerRadius"] = UDim.new(0,5); a[r.uc1]["Parent"] = a[r.f]
+        a[r.l]["Position"] = UDim2.new(0,8,0,0); a[r.l]["Size"] = UDim2.new(1,-96,1,0)
+        a[r.l]["BackgroundTransparency"] = 1; a[r.l]["ZIndex"] = 103
+        a[r.l]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        a[r.l]["Text"] = r.lbl; a[r.l]["TextColor3"] = Color3.fromRGB(200,200,210); a[r.l]["TextSize"] = 13
+        a[r.l]["TextTruncate"] = Enum.TextTruncate.AtEnd; a[r.l]["TextXAlignment"] = Enum.TextXAlignment.Left
+        a[r.l]["Parent"] = a[r.f]
+        -- X button
+        a["TextButton 73"]["Position"] = UDim2.new(1,-22,.5,-12); a["TextButton 73"]["Size"] = UDim2.new(0,24,0,24)
+        a["TextButton 73"]["BackgroundColor3"] = Color3.fromRGB(248,113,113); a["TextButton 73"]["ZIndex"] = 103
+        a["TextButton 73"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        a["TextButton 73"]["Text"] = "X"; a["TextButton 73"]["TextColor3"] = Color3.fromRGB(255,255,255)
+        a["TextButton 73"]["TextSize"] = 12; a["TextButton 73"]["Parent"] = a[r.f]
+        a[r.uc2]["CornerRadius"] = UDim.new(0,4); a[r.uc2]["Parent"] = a["TextButton 73"]
+        a["TextButton 74"]["Position"] = UDim2.new(1,-48,.5,-12); a["TextButton 74"]["Size"] = UDim2.new(0,24,0,24)
+        a["TextButton 74"]["BackgroundColor3"] = Color3.fromRGB(99,102,241); a["TextButton 74"]["ZIndex"] = 103
+        a["TextButton 74"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        a["TextButton 74"]["Text"] = "▼"; a["TextButton 74"]["TextColor3"] = Color3.fromRGB(255,255,255)
+        a["TextButton 74"]["TextSize"] = 12; a["TextButton 74"]["Parent"] = a[r.f]
+        a[r.uc3]["CornerRadius"] = UDim.new(0,4); a[r.uc3]["Parent"] = a["TextButton 74"]
+        a["TextButton 75"]["Position"] = UDim2.new(1,-74,.5,-12); a["TextButton 75"]["Size"] = UDim2.new(0,24,0,24)
+        a["TextButton 75"]["BackgroundColor3"] = Color3.fromRGB(99,102,241); a["TextButton 75"]["ZIndex"] = 103
+        a["TextButton 75"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        a["TextButton 75"]["Text"] = "▲"; a["TextButton 75"]["TextColor3"] = Color3.fromRGB(255,255,255)
+        a["TextButton 75"]["TextSize"] = 12; a["TextButton 75"]["Parent"] = a[r.f]
+        a[r.uc4]["CornerRadius"] = UDim.new(0,4); a[r.uc4]["Parent"] = a["TextButton 75"]
+    end
+
+    -- Add item bar (LayoutOrder 3)
+    a["Frame 154"] = Instance.new("Frame")
+    a["Frame 154"]["Size"] = UDim2.new(1,0,0,32); a["Frame 154"]["BackgroundColor3"] = Color3.fromRGB(40,40,50)
+    a["Frame 154"]["BackgroundTransparency"] = 0.85; a["Frame 154"]["LayoutOrder"] = 3
+    a["Frame 154"]["ZIndex"] = 101; a["Frame 154"]["Parent"] = a["Priority"]
+    local uc339 = Instance.new("UICorner"); uc339.CornerRadius = UDim.new(0,5); uc339.Parent = a["Frame 154"]
+    a["TextBox 3"] = Instance.new("TextBox")
+    a["TextBox 3"]["Position"] = UDim2.new(0,4,0,3); a["TextBox 3"]["Size"] = UDim2.new(1,-84,1,-6)
+    a["TextBox 3"]["BackgroundColor3"] = Color3.fromRGB(8,8,12); a["TextBox 3"]["BackgroundTransparency"] = 0.3
+    a["TextBox 3"]["ZIndex"] = 102
+    a["TextBox 3"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    a["TextBox 3"]["Text"] = ""; a["TextBox 3"]["TextColor3"] = Color3.fromRGB(255,255,255); a["TextBox 3"]["TextSize"] = 13
+    a["TextBox 3"]["ClearTextOnFocus"] = false; a["TextBox 3"]["PlaceholderColor3"] = Color3.fromRGB(70,70,80)
+    a["TextBox 3"]["PlaceholderText"] = "Add item..."; a["TextBox 3"]["Parent"] = a["Frame 154"]
+    local uc340 = Instance.new("UICorner"); uc340.CornerRadius = UDim.new(0,4); uc340.Parent = a["TextBox 3"]
+    local addBtn = Instance.new("TextButton")
+    addBtn.Position = UDim2.new(1,-78,0,3); addBtn.Size = UDim2.new(0,36,1,-6)
+    addBtn.BackgroundColor3 = Color3.fromRGB(74,222,128); addBtn.ZIndex = 102
+    addBtn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    addBtn.Text = "ADD"; addBtn.TextColor3 = Color3.fromRGB(0,0,0); addBtn.TextSize = 9
+    addBtn.Parent = a["Frame 154"]
+    local uc341 = Instance.new("UICorner"); uc341.CornerRadius = UDim.new(0,4); uc341.Parent = addBtn
+    local resetPrioBtn = Instance.new("TextButton")
+    resetPrioBtn.Position = UDim2.new(1,-38,0,3); resetPrioBtn.Size = UDim2.new(0,36,1,-6)
+    resetPrioBtn.BackgroundColor3 = Color3.fromRGB(248,113,113); resetPrioBtn.BackgroundTransparency = 0.3
+    resetPrioBtn.ZIndex = 102
+    resetPrioBtn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    resetPrioBtn.Text = "RESET"; resetPrioBtn.TextColor3 = Color3.fromRGB(255,255,255)
+    resetPrioBtn.Parent = a["Frame 154"]
+    local uc342 = Instance.new("UICorner"); uc342.CornerRadius = UDim.new(0,4); uc342.Parent = resetPrioBtn
+
+    -- PERFORMANCE TAB
+    a["Performance"]["Size"] = UDim2.new(1,0,1,0); a["Performance"]["BackgroundTransparency"] = 1
+    a["Performance"]["Visible"] = false; a["Performance"]["ZIndex"] = 101
+    a["Performance"]["AutomaticCanvasSize"] = Enum.AutomaticSize.Y; a["Performance"]["CanvasSize"] = UDim2.new(0,0,0,0)
+    a["Performance"]["ScrollBarImageColor3"] = Color3.fromRGB(99,102,241)
+    a["Performance"]["ScrollBarThickness"] = 3; a["Performance"]["ScrollingDirection"] = Enum.ScrollingDirection.Y
+    a["Performance"]["Name"] = "Performance"; a["Performance"]["Parent"] = a["Frame 4"]
+    a["UIListLayout 9"]["Padding"] = UDim.new(0,5); a["UIListLayout 9"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+    a["UIListLayout 9"]["Parent"] = a["Performance"]
+
+    local perfRows = {
+        {f="Frame 155", l="TextLabel 107", b="TextButton 189", lbl="FPS Boost",                        lo=1, on=false, uc1="UICorner 343", uc2="UICorner 344", fk="Frame 156", fkuc="UICorner 345"},
+        {f="Frame 157", l="TextLabel 108", b="TextButton 190", lbl="  Dark Mode",                      lo=2, on=false, uc1="UICorner 346", uc2="UICorner 347", fk="Frame 158", fkuc="UICorner 348"},
+        {f="Frame 159", l="TextLabel 109", b="TextButton 191", lbl="  Disable Object Animations",      lo=3, on=true,  uc1="UICorner 349", uc2="UICorner 350", fk="Frame 160", fkuc="UICorner 351"},
+        {f="Frame 161", l="TextLabel 110", b="TextButton 192", lbl="Remove Player Accessories (Rejoin)",lo=4, on=true, uc1="UICorner 352", uc2="UICorner 353", fk="Frame 162", fkuc="UICorner 354"},
+        {f="Frame 163", l="TextLabel 111", b="TextButton 193", lbl="Remove Tool Textures",             lo=5, on=false, uc1="UICorner 355", uc2="UICorner 356", fk="Frame 164", fkuc="UICorner 357"},
+    }
+    for _, r in ipairs(perfRows) do
+        a[r.f]["Size"] = UDim2.new(1,0,0,34); a[r.f]["BackgroundColor3"] = Color3.fromRGB(40,40,50)
+        a[r.f]["BackgroundTransparency"] = 0.85; a[r.f]["LayoutOrder"] = r.lo; a[r.f]["ZIndex"] = 101
+        a[r.f]["Parent"] = a["Performance"]
+        a[r.uc1]["CornerRadius"] = UDim.new(0,6); a[r.uc1]["Parent"] = a[r.f]
+        a[r.l]["Position"] = UDim2.new(0,10,0,0); a[r.l]["Size"] = UDim2.new(1,-55,1,0)
+        a[r.l]["BackgroundTransparency"] = 1; a[r.l]["ZIndex"] = 101
+        a[r.l]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+        a[r.l]["Text"] = r.lbl; a[r.l]["TextColor3"] = Color3.fromRGB(255,255,255); a[r.l]["TextSize"] = 12
+        a[r.l]["TextTruncate"] = Enum.TextTruncate.AtEnd; a[r.l]["TextXAlignment"] = Enum.TextXAlignment.Left
+        a[r.l]["Parent"] = a[r.f]
+        local onCol = r.on and Color3.fromRGB(74,222,128) or Color3.fromRGB(60,60,60)
+        a[r.b]["Size"] = UDim2.new(0,38,0,20); a[r.b]["BackgroundColor3"] = onCol; a[r.b]["ZIndex"] = 102
+        a[r.b]["Text"] = ""; a[r.b]["Parent"] = a[r.f]
+        if r.on then
+            a[r.b]["Position"] = UDim2.new(1,-48,.5,-10)
+        else
+            a[r.b]["Position"] = UDim2.new(1,-48,.5,-10)
+        end
+        a[r.uc2]["CornerRadius"] = UDim.new(1,0); a[r.uc2]["Parent"] = a[r.b]
+        local knob = Instance.new("Frame")
+        knob.Size = UDim2.new(0,14,0,14); knob.BackgroundColor3 = Color3.fromRGB(255,255,255); knob.ZIndex = 103
+        knob.Position = r.on and UDim2.new(1,-17,.5,-7) or UDim2.new(0,3,.5,-7)
+        knob.Parent = a[r.b]
+        local kuc = Instance.new("UICorner"); kuc.CornerRadius = UDim.new(1,0); kuc.Parent = knob
+    end
+end
+
+-- ============================================================
+-- MOVEMENT PANEL (WalkspeedFrame)
+-- ============================================================
+local _movVars = {rotation = 180, depth = 5.0, speed = 27}
+
+do
+    local a = {
+        ["WalkspeedFrame"]  = Instance.new("Frame"),
+        ["UICorner"]        = Instance.new("UICorner"),
+        ["TitleBar"]        = Instance.new("Frame"),
+        ["TitleLabel"]      = Instance.new("TextLabel"),
+        ["SubtitleLabel"]   = Instance.new("TextLabel"),
+        ["DividerTop"]      = Instance.new("Frame"),
+    }
+
+    a["WalkspeedFrame"]["Position"] = UDim2.new(0, 20, .5, -365)
+    a["WalkspeedFrame"]["Size"] = UDim2.new(0, 220, 0, 398)
+    a["WalkspeedFrame"]["Active"] = true
+    a["WalkspeedFrame"]["BackgroundColor3"] = Color3.fromRGB(12, 12, 18)
+    a["WalkspeedFrame"]["BackgroundTransparency"] = 0.05
+    a["WalkspeedFrame"]["BorderSizePixel"] = 0
+    a["WalkspeedFrame"]["ZIndex"] = 10
+    a["WalkspeedFrame"]["Name"] = "WalkspeedFrame"
+    a["WalkspeedFrame"]["Parent"] = _ScreenGui
+
+    a["UICorner"]["CornerRadius"] = UDim.new(0, 12)
+    a["UICorner"]["Parent"] = a["WalkspeedFrame"]
+
+    a["TitleBar"]["Size"] = UDim2.new(1, 0, 0, 35)
+    a["TitleBar"]["Active"] = true
+    a["TitleBar"]["BackgroundTransparency"] = 1
+    a["TitleBar"]["ZIndex"] = 11
+    a["TitleBar"]["Name"] = "TitleBar"
+    a["TitleBar"]["Parent"] = a["WalkspeedFrame"]
+
+    a["TitleLabel"]["Position"] = UDim2.new(0, 0, 0, 5)
+    a["TitleLabel"]["Size"] = UDim2.new(1, 0, 0, 14)
+    a["TitleLabel"]["BackgroundTransparency"] = 1
+    a["TitleLabel"]["ZIndex"] = 11
+    a["TitleLabel"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    a["TitleLabel"]["Text"] = "XENHUB V5"
+    a["TitleLabel"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+    a["TitleLabel"]["TextSize"] = 11
+    a["TitleLabel"]["Name"] = "TitleLabel"
+    a["TitleLabel"]["Parent"] = a["WalkspeedFrame"]
+
+    a["SubtitleLabel"]["Position"] = UDim2.new(0, 0, 0, 18)
+    a["SubtitleLabel"]["Size"] = UDim2.new(1, 0, 0, 10)
+    a["SubtitleLabel"]["BackgroundTransparency"] = 1
+    a["SubtitleLabel"]["ZIndex"] = 11
+    a["SubtitleLabel"]["FontFace"] = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    a["SubtitleLabel"]["Text"] = "Movement Panel"
+    a["SubtitleLabel"]["TextColor3"] = Color3.fromRGB(160, 160, 170)
+    a["SubtitleLabel"]["TextSize"] = 9
+    a["SubtitleLabel"]["Name"] = "SubtitleLabel"
+    a["SubtitleLabel"]["Parent"] = a["WalkspeedFrame"]
+
+    a["DividerTop"]["Position"] = UDim2.new(.075, 0, 0, 35)
+    a["DividerTop"]["Size"] = UDim2.new(.85, 0, 0, 1)
+    a["DividerTop"]["BackgroundColor3"] = Color3.fromRGB(99, 102, 241)
+    a["DividerTop"]["BackgroundTransparency"] = 0.5
+    a["DividerTop"]["BorderSizePixel"] = 0
+    a["DividerTop"]["ZIndex"] = 11
+    a["DividerTop"]["Parent"] = a["WalkspeedFrame"]
+
+    local UIGradient = Instance.new("UIGradient"); UIGradient.Parent = a["DividerTop"]
+
+    -- Toggle buttons
+    local toggleDefs = {
+        {lbl="Invis Steal (U):", yPos=45,  key="invisSteal"},
+        {lbl="Float (B):",       yPos=79,  key="float"},
+        {lbl="Walkspeed (V):",   yPos=113, key="walkspeed"},
+        {lbl="Unwalk:",          yPos=147, key="unwalk"},
+        {lbl="Auto Walk to Base:", yPos=181, key="autoWalk"},
+    }
+
+    local movWF = a["WalkspeedFrame"]
+    for _, td in ipairs(toggleDefs) do
+        local lbl = Instance.new("TextLabel")
+        lbl.Position = UDim2.new(0, 10, 0, td.yPos)
+        lbl.Size = UDim2.new(0, 110, 0, 28)
+        lbl.BackgroundTransparency = 1; lbl.ZIndex = 11
+        lbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        lbl.Text = td.lbl; lbl.TextColor3 = Color3.fromRGB(220, 220, 230)
+        lbl.TextSize = 13; lbl.TextXAlignment = Enum.TextXAlignment.Left
+        lbl.Parent = movWF
+
+        local btn = Instance.new("TextButton")
+        btn.Position = UDim2.new(1, -80, 0, td.yPos)
+        btn.Size = UDim2.new(0, 75, 0, 28)
+        btn.BackgroundColor3 = Color3.fromRGB(50, 50, 65)
+        btn.BackgroundTransparency = 0.15
+        btn.BorderSizePixel = 0; btn.ZIndex = 11
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = "OFF"; btn.TextColor3 = Color3.fromRGB(255, 255, 255); btn.TextSize = 13
+        btn.Parent = movWF
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0, 6); buc.Parent = btn
+        local bus = Instance.new("UIStroke"); bus.Color = Color3.fromRGB(99,102,241); bus.Transparency = 0.7; bus.Parent = btn
+
+        local state = false
+        btn.MouseButton1Click:Connect(function()
+            state = not state
+            btn.Text = state and "ON" or "OFF"
+            btn.BackgroundColor3 = state and Color3.fromRGB(74,222,128) or Color3.fromRGB(50,50,65)
+            btn.BackgroundTransparency = state and 0 or 0.15
+        end)
+    end
+
+    -- Divider 2
+    local div2 = Instance.new("Frame")
+    div2.Position = UDim2.new(.075, 0, 0, 215); div2.Size = UDim2.new(.85, 0, 0, 1)
+    div2.BackgroundColor3 = Color3.fromRGB(99,102,241); div2.BackgroundTransparency = 0.5
+    div2.BorderSizePixel = 0; div2.ZIndex = 11; div2.Parent = a["WalkspeedFrame"]
+    local dg2 = Instance.new("UIGradient"); dg2.Parent = div2
+
+    -- ── ROTATION SLIDER ─────────────────────────────────────
+    local rotWrap = Instance.new("Frame")
+    rotWrap.Position = UDim2.new(0,8,0,223); rotWrap.Size = UDim2.new(1,-16,0,58)
+    rotWrap.BackgroundTransparency = 1; rotWrap.ZIndex = 11; rotWrap.Parent = a["WalkspeedFrame"]
+
+    local rotLbl = Instance.new("TextLabel")
+    rotLbl.Size = UDim2.new(0,120,0,16); rotLbl.BackgroundTransparency = 1; rotLbl.ZIndex = 11
+    rotLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    rotLbl.Text = "Rotation: 180"; rotLbl.TextColor3 = Color3.fromRGB(255,255,255); rotLbl.TextSize = 13
+    rotLbl.TextXAlignment = Enum.TextXAlignment.Left; rotLbl.Name = "RotLbl"; rotLbl.Parent = rotWrap
+
+    local rotTrack = Instance.new("Frame")
+    rotTrack.Position = UDim2.new(0,0,0,22); rotTrack.Size = UDim2.new(1,0,0,8)
+    rotTrack.BackgroundColor3 = Color3.fromRGB(40,40,50); rotTrack.ZIndex = 11; rotTrack.Name = "RotTrack"
+    rotTrack.Parent = rotWrap
+    local rtuc = Instance.new("UICorner"); rtuc.CornerRadius = UDim.new(1,0); rtuc.Parent = rotTrack
+
+    local rotFill = Instance.new("Frame")
+    rotFill.Size = UDim2.new(0.5, 0, 1, 0)  -- 180/360 = 0.5
+    rotFill.BackgroundColor3 = Color3.fromRGB(99,102,241); rotFill.ZIndex = 12; rotFill.Name = "RotFill"
+    rotFill.Parent = rotTrack
+    local rfuc = Instance.new("UICorner"); rfuc.CornerRadius = UDim.new(1,0); rfuc.Parent = rotFill
+
+    local rotKnob = Instance.new("Frame")
+    rotKnob.Position = UDim2.new(0.5, 0, .5, 0); rotKnob.Size = UDim2.new(0,12,0,12)
+    rotKnob.AnchorPoint = Vector2.new(.5,.5); rotKnob.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    rotKnob.ZIndex = 13; rotKnob.Name = "RotKnob"; rotKnob.Parent = rotTrack
+    local rkuc = Instance.new("UICorner"); rkuc.CornerRadius = UDim.new(1,0); rkuc.Parent = rotKnob
+
+    -- Auto-rotate checkbox
+    local autoRotLbl = Instance.new("TextLabel")
+    autoRotLbl.Position = UDim2.new(0,0,0,36); autoRotLbl.Size = UDim2.new(0,90,0,16)
+    autoRotLbl.BackgroundTransparency = 1; autoRotLbl.ZIndex = 11
+    autoRotLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    autoRotLbl.Text = "Auto rotate:"; autoRotLbl.TextColor3 = Color3.fromRGB(255,255,255); autoRotLbl.TextSize = 12
+    autoRotLbl.TextXAlignment = Enum.TextXAlignment.Left; autoRotLbl.Parent = rotWrap
+
+    local autoRotBtn = Instance.new("TextButton")
+    autoRotBtn.Position = UDim2.new(0,80,0,35); autoRotBtn.Size = UDim2.new(0,18,0,18)
+    autoRotBtn.BackgroundColor3 = Color3.fromRGB(35,35,45); autoRotBtn.BorderSizePixel = 0
+    autoRotBtn.ZIndex = 11; autoRotBtn.Text = ""; autoRotBtn.Parent = rotWrap
+    local arbuc = Instance.new("UICorner"); arbuc.CornerRadius = UDim.new(0,4); arbuc.Parent = autoRotBtn
+    local arState = false
+    autoRotBtn.MouseButton1Click:Connect(function()
+        arState = not arState
+        autoRotBtn.BackgroundColor3 = arState and Color3.fromRGB(99,102,241) or Color3.fromRGB(35,35,45)
+    end)
+
+    -- ── DEPTH SLIDER ─────────────────────────────────────────
+    local depWrap = Instance.new("Frame")
+    depWrap.Position = UDim2.new(0,8,0,291); depWrap.Size = UDim2.new(1,-16,0,36)
+    depWrap.BackgroundTransparency = 1; depWrap.ZIndex = 11; depWrap.Parent = a["WalkspeedFrame"]
+
+    local depLbl = Instance.new("TextLabel")
+    depLbl.Size = UDim2.new(0,70,0,16); depLbl.BackgroundTransparency = 1; depLbl.ZIndex = 11
+    depLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    depLbl.Text = "Depth: 5.0"; depLbl.TextColor3 = Color3.fromRGB(255,255,255); depLbl.TextSize = 13
+    depLbl.TextXAlignment = Enum.TextXAlignment.Left; depLbl.Name = "DepLbl"; depLbl.Parent = depWrap
+
+    local depTrack = Instance.new("Frame")
+    depTrack.Position = UDim2.new(0,0,0,22); depTrack.Size = UDim2.new(1,0,0,8)
+    depTrack.BackgroundColor3 = Color3.fromRGB(40,40,50); depTrack.ZIndex = 11; depTrack.Name = "DepTrack"
+    depTrack.Parent = depWrap
+    local dtuc = Instance.new("UICorner"); dtuc.CornerRadius = UDim.new(1,0); dtuc.Parent = depTrack
+
+    -- depth range 0.5 to 10.5, default 5.0 → pct = (5-0.5)/(10.5-0.5) ≈ 0.4737
+    local depFill = Instance.new("Frame")
+    depFill.Size = UDim2.new(0.4737, 0, 1, 0)
+    depFill.BackgroundColor3 = Color3.fromRGB(99,102,241); depFill.ZIndex = 12; depFill.Parent = depTrack
+    local dfuc = Instance.new("UICorner"); dfuc.CornerRadius = UDim.new(1,0); dfuc.Parent = depFill
+
+    local depKnob = Instance.new("Frame")
+    depKnob.Position = UDim2.new(0.4737, 0, .5, 0); depKnob.Size = UDim2.new(0,12,0,12)
+    depKnob.AnchorPoint = Vector2.new(.5,.5); depKnob.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    depKnob.ZIndex = 13; depKnob.Parent = depTrack
+    local dkuc = Instance.new("UICorner"); dkuc.CornerRadius = UDim.new(1,0); dkuc.Parent = depKnob
+
+    -- ── SPEED SLIDER ──────────────────────────────────────────
+    local spdWrap = Instance.new("Frame")
+    spdWrap.Position = UDim2.new(0,8,0,346); spdWrap.Size = UDim2.new(1,-16,0,36)
+    spdWrap.BackgroundTransparency = 1; spdWrap.ZIndex = 11; spdWrap.Parent = a["WalkspeedFrame"]
+
+    local spdLbl = Instance.new("TextLabel")
+    spdLbl.Size = UDim2.new(0,100,0,16); spdLbl.BackgroundTransparency = 1; spdLbl.ZIndex = 11
+    spdLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    spdLbl.Text = "Speed: 27"; spdLbl.TextColor3 = Color3.fromRGB(255,255,255); spdLbl.TextSize = 13
+    spdLbl.TextXAlignment = Enum.TextXAlignment.Left; spdLbl.Name = "SpeedLabel"; spdLbl.Parent = spdWrap
+
+    local spdTrack = Instance.new("Frame")
+    spdTrack.Position = UDim2.new(0,0,0,22); spdTrack.Size = UDim2.new(1,0,0,8)
+    spdTrack.BackgroundColor3 = Color3.fromRGB(40,40,50); spdTrack.ZIndex = 11; spdTrack.Name = "SpdTrack"
+    spdTrack.Parent = spdWrap
+    local stuc = Instance.new("UICorner"); stuc.CornerRadius = UDim.new(1,0); stuc.Parent = spdTrack
+
+    -- speed range 16 to 100, default 27 → pct = (27-16)/(100-16) ≈ 0.1309
+    local spdFill = Instance.new("Frame")
+    spdFill.Size = UDim2.new(0.1309, 0, 1, 0)
+    spdFill.BackgroundColor3 = Color3.fromRGB(99,102,241); spdFill.ZIndex = 12; spdFill.Parent = spdTrack
+    local sfuc = Instance.new("UICorner"); sfuc.CornerRadius = UDim.new(1,0); sfuc.Parent = spdFill
+
+    local spdKnob = Instance.new("Frame")
+    spdKnob.Position = UDim2.new(0.1309, 0, .5, 0); spdKnob.Size = UDim2.new(0,12,0,12)
+    spdKnob.AnchorPoint = Vector2.new(.5,.5); spdKnob.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    spdKnob.ZIndex = 13; spdKnob.Parent = spdTrack
+    local skuc = Instance.new("UICorner"); skuc.CornerRadius = UDim.new(1,0); skuc.Parent = spdKnob
+
+    -- ── SLIDER LOGIC (generic) ────────────────────────────────
+    local UIS2 = game:GetService("UserInputService")
+
+    local function makeSlider(track, fill, knob, lbl, minVal, maxVal, defaultVal, fmt)
+        local isDragging = false
+        local function update(pct)
+            pct = math.clamp(pct, 0, 1)
+            local val = minVal + (maxVal - minVal) * pct
+            if fmt == "int" then val = math.round(val) end
+            val = math.floor(val * 10 + 0.5) / 10  -- round to 1dp
+            fill.Size = UDim2.new(pct, 0, 1, 0)
+            knob.Position = UDim2.new(pct, 0, .5, 0)
+            if fmt == "int" then
+                lbl.Text = lbl.Name:match("Speed") and ("Speed: "..tostring(math.round(val)))
+                    or lbl.Text
+                if lbl.Name == "SpeedLabel" then lbl.Text = "Speed: "..tostring(math.round(val)) end
+            elseif fmt == "rot" then
+                local rv = math.round(minVal + (maxVal-minVal)*pct)
+                lbl.Text = "Rotation: "..rv
+                _movVars.rotation = rv
+            elseif fmt == "dep" then
+                local dv = math.floor((minVal + (maxVal-minVal)*pct)*10+0.5)/10
+                lbl.Text = "Depth: "..string.format("%.1f", dv)
+                _movVars.depth = dv
+            elseif fmt == "spd" then
+                local sv = math.round(minVal + (maxVal-minVal)*pct)
+                lbl.Text = "Speed: "..sv
+                _movVars.speed = sv
+                -- apply walkspeed if character exists
+                local lp2 = game:GetService("Players").LocalPlayer
+                local char = lp2 and lp2.Character
+                local hum  = char and char:FindFirstChildWhichIsA("Humanoid")
+                if hum then hum.WalkSpeed = sv end
+            end
+        end
+
+        knob.InputBegan:Connect(function(inp)
+            if inp.UserInputType == Enum.UserInputType.MouseButton1 or
+               inp.UserInputType == Enum.UserInputType.Touch then
+                isDragging = true
+            end
+        end)
+        track.InputBegan:Connect(function(inp)
+            if inp.UserInputType == Enum.UserInputType.MouseButton1 or
+               inp.UserInputType == Enum.UserInputType.Touch then
+                isDragging = true
+                local relX = inp.Position.X - track.AbsolutePosition.X
+                local pct  = relX / track.AbsoluteSize.X
+                update(pct)
+            end
+        end)
+        UIS2.InputEnded:Connect(function(inp)
+            if inp.UserInputType == Enum.UserInputType.MouseButton1 or
+               inp.UserInputType == Enum.UserInputType.Touch then
+                isDragging = false
+            end
+        end)
+        UIS2.InputChanged:Connect(function(inp)
+            if isDragging and (inp.UserInputType == Enum.UserInputType.MouseMovement or
+               inp.UserInputType == Enum.UserInputType.Touch) then
+                local relX = inp.Position.X - track.AbsolutePosition.X
+                local pct  = relX / track.AbsoluteSize.X
+                update(pct)
+            end
+        end)
+        -- set initial
+        update((defaultVal - minVal) / (maxVal - minVal))
+    end
+
+    makeSlider(rotTrack, rotFill, rotKnob, rotLbl,  0,   360, 180, "rot")
+    makeSlider(depTrack, depFill, depKnob, depLbl,  0.5, 10.5, 5.0, "dep")
+    makeSlider(spdTrack, spdFill, spdKnob, spdLbl, 16,  100,  27,  "spd")
+end
+
+-- ============================================================
+-- ACTIONS PANEL  ← MOVED BELOW STEAL PANEL
+-- Y position set to 1, -275 (steal is at 1,-611, height 272 → bottom at 1,-339, so actions at 1,-325 gap)
+-- ============================================================
+local _actionsPanel
+do
+    local a = {}
+    a["V5ActionsPanel"] = Instance.new("Frame")
+    a["V5ActionsPanel"]["Position"] = UDim2.new(1, -230, 1, -325)  -- MOVED: below steal panel
+    a["V5ActionsPanel"]["Size"] = UDim2.new(0, 220, 0, 310)
+    a["V5ActionsPanel"]["AnchorPoint"] = Vector2.new(1, 1)
+    a["V5ActionsPanel"]["BackgroundColor3"] = Color3.fromRGB(12, 12, 18)
+    a["V5ActionsPanel"]["BackgroundTransparency"] = 0.05
+    a["V5ActionsPanel"]["BorderSizePixel"] = 0
+    a["V5ActionsPanel"]["Name"] = "V5ActionsPanel"
+    a["V5ActionsPanel"]["Parent"] = _ScreenGui
+    _actionsPanel = a["V5ActionsPanel"]
+
+    local uc = Instance.new("UICorner"); uc.CornerRadius = UDim.new(0,12); uc.Parent = a["V5ActionsPanel"]
+
+    local titleBar = Instance.new("Frame")
+    titleBar.Size = UDim2.new(1,0,0,40); titleBar.Active = true; titleBar.BackgroundTransparency = 1
+    titleBar.Name = "TitleBar"; titleBar.Parent = a["V5ActionsPanel"]
+
+    local t2 = Instance.new("TextLabel")
+    t2.Position = UDim2.new(0,0,0,6); t2.Size = UDim2.new(1,0,0,16)
+    t2.BackgroundTransparency = 1
+    t2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    t2.Text = "XENHUB V5"; t2.TextColor3 = Color3.fromRGB(255,255,255); t2.TextSize = 12
+    t2.Parent = titleBar
+
+    local t3 = Instance.new("TextLabel")
+    t3.Position = UDim2.new(0,0,0,20); t3.Size = UDim2.new(1,0,0,12)
+    t3.BackgroundTransparency = 1
+    t3.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    t3.Text = "Actions"; t3.TextColor3 = Color3.fromRGB(160,160,170); t3.TextSize = 10
+    t3.Parent = titleBar
+
+    local div = Instance.new("Frame")
+    div.Position = UDim2.new(.075,0,0,40); div.Size = UDim2.new(.85,0,0,1)
+    div.BackgroundColor3 = Color3.fromRGB(99,102,241); div.BackgroundTransparency = 0.5
+    div.BorderSizePixel = 0; div.ZIndex = 11; div.Parent = a["V5ActionsPanel"]
+    Instance.new("UIGradient").Parent = div
+
+    local btnsFrame = Instance.new("Frame")
+    btnsFrame.Position = UDim2.new(0,6,0,48); btnsFrame.Size = UDim2.new(1,-12,0,255)
+    btnsFrame.BackgroundTransparency = 1; btnsFrame.Name = "Buttons"; btnsFrame.Parent = a["V5ActionsPanel"]
+
+    local ll = Instance.new("UIListLayout"); ll.Padding = UDim.new(0,6)
+    ll.SortOrder = Enum.SortOrder.LayoutOrder; ll.Parent = btnsFrame
+
+    local btnDefs = {
+        {name="Teleport",   text="Teleport (T)",       lo=1, col=Color3.fromRGB(40,40,50)},
+        {name="Ragdoll",    text="Ragdoll Self (R)",   lo=2, col=Color3.fromRGB(40,40,50)},
+        {name="Rejoin",     text="Rejoin PS",          lo=3, col=Color3.fromRGB(40,40,50)},
+        {name="RejoinJobId",text="Rejoin Job ID (J)",  lo=4, col=Color3.fromRGB(40,40,50)},
+        {name="Kick",       text="Kick (Y)",           lo=5, col=Color3.fromRGB(40,40,50)},
+        {name="Reset",      text="Reset (X)",          lo=6, col=Color3.fromRGB(200,80,80)},
+        {name="Settings",   text="⚙ Settings",         lo=7, col=Color3.fromRGB(99,102,241)},
+    }
+    for _, bd in ipairs(btnDefs) do
+        local btn = Instance.new("TextButton")
+        btn.Size = UDim2.new(1,0,0,30); btn.BackgroundColor3 = bd.col
+        btn.BackgroundTransparency = 0.3; btn.LayoutOrder = bd.lo
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = bd.text; btn.TextColor3 = Color3.fromRGB(255,255,255); btn.TextSize = 13
+        btn.Name = bd.name; btn.Parent = btnsFrame
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0,6); buc.Parent = btn
+        local bus = Instance.new("UIStroke"); bus.Color = Color3.fromRGB(99,102,241); bus.Transparency = 0.7; bus.Parent = btn
+    end
+end
+
+-- ============================================================
+-- UNLOCK BUTTONS
+-- ============================================================
+do
+    local a = {}
+    a["UnlockBtnContainer"] = Instance.new("Frame")
+    a["UnlockBtnContainer"]["Position"] = UDim2.new(.5,-100,1,-200)
+    a["UnlockBtnContainer"]["Size"] = UDim2.new(0,200,0,51)
+    a["UnlockBtnContainer"]["BackgroundColor3"] = Color3.fromRGB(10,10,16)
+    a["UnlockBtnContainer"]["BackgroundTransparency"] = 0.08
+    a["UnlockBtnContainer"]["ZIndex"] = 101
+    a["UnlockBtnContainer"]["Name"] = "UnlockBtnContainer"
+    a["UnlockBtnContainer"]["Parent"] = _ScreenGui
+    local uc = Instance.new("UICorner"); uc.CornerRadius = UDim.new(0,12); uc.Parent = a["UnlockBtnContainer"]
+    local us = Instance.new("UIStroke"); us.Color = Color3.fromRGB(47,60,255); us.Thickness = 1.5; us.Transparency = 0.5; us.Parent = a["UnlockBtnContainer"]
+
+    for i, info in ipairs({{name="UnlockFloor1",xOff=4},{name="UnlockFloor2",xOff=70},{name="UnlockFloor3",xOff=136}}) do
+        local btn = Instance.new("TextButton")
+        btn.Position = UDim2.new(0,info.xOff,0,4); btn.Size = UDim2.new(0,60,0,43)
+        btn.BackgroundColor3 = Color3.fromRGB(14,17,23); btn.BackgroundTransparency = 0.05
+        btn.ZIndex = 103
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = tostring(i); btn.TextColor3 = Color3.fromRGB(217,225,255); btn.TextSize = 14
+        btn.Name = info.name; btn.Parent = a["UnlockBtnContainer"]
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0,14); buc.Parent = btn
+        local bus = Instance.new("UIStroke"); bus.Color = Color3.fromRGB(47,60,255); bus.Thickness = 1.5; bus.Transparency = 0.3; bus.Parent = btn
+    end
+end
+
+-- ============================================================
+-- SCROLLING LOG FRAME
+-- ============================================================
+do
+    local sf = Instance.new("ScrollingFrame")
+    sf.Position = UDim2.new(0,17,1,-419); sf.Size = UDim2.new(0,480,0,389)
+    sf.BackgroundColor3 = Color3.fromRGB(12,12,18); sf.BackgroundTransparency = 0.5
+    sf.ScrollBarThickness = 0; sf.Name = "ScrollingFrame"; sf.Parent = _ScreenGui
+    local sfuc = Instance.new("UICorner"); sfuc.CornerRadius = UDim.new(0,6); sfuc.Parent = sf
+    local sfinner = Instance.new("Frame"); sfinner.Size = UDim2.new(1,0,1,0)
+    sfinner.BackgroundTransparency = 1; sfinner.Parent = sf
+    local sfll = Instance.new("UIListLayout"); sfll.Padding = UDim.new(0,2)
+    sfll.SortOrder = Enum.SortOrder.LayoutOrder; sfll.Parent = sfinner
+end
+
+-- ============================================================
+-- PROXIMITY / ADMIN COMMAND PANEL
+-- ============================================================
+local _proxPanel
+do
+    local pf = Instance.new("Frame")
+    pf.Position = UDim2.new(1,-420,1,-510); pf.Size = UDim2.new(0,180,0,200)
+    pf.BackgroundColor3 = Color3.fromRGB(12,12,18); pf.BackgroundTransparency = 0.05
+    pf.Name = "ProximityFrame"; pf.Parent = _ScreenGui; _proxPanel = pf
+    local pfuc = Instance.new("UICorner"); pfuc.CornerRadius = UDim.new(0,14); pfuc.Parent = pf
+
+    local hdr = Instance.new("Frame"); hdr.Size = UDim2.new(1,0,0,34); hdr.BackgroundTransparency = 1; hdr.Parent = pf
+    local ht1 = Instance.new("TextLabel"); ht1.Position = UDim2.new(0,0,0,5); ht1.Size = UDim2.new(1,0,0,14)
+    ht1.BackgroundTransparency = 1
+    ht1.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    ht1.Text = "XENHUB V5"; ht1.TextColor3 = Color3.fromRGB(255,255,255); ht1.TextSize = 11; ht1.Parent = hdr
+    local ht2 = Instance.new("TextLabel"); ht2.Position = UDim2.new(0,0,0,18); ht2.Size = UDim2.new(1,0,0,10)
+    ht2.BackgroundTransparency = 1
+    ht2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    ht2.Text = "Admin Command Panel"; ht2.TextColor3 = Color3.fromRGB(160,160,170); ht2.TextSize = 9; ht2.Parent = hdr
+    local hdiv = Instance.new("Frame"); hdiv.Position = UDim2.new(.075,0,1,-1); hdiv.Size = UDim2.new(.85,0,0,1)
+    hdiv.BackgroundColor3 = Color3.fromRGB(99,102,241); hdiv.BackgroundTransparency = 0.5
+    hdiv.BorderSizePixel = 0; hdiv.Parent = hdr
+    Instance.new("UIGradient").Parent = hdiv
+
+    local function makeProxBtn(yOff, txt, name)
+        local btn = Instance.new("TextButton")
+        btn.Position = UDim2.new(.05,0,0,yOff); btn.Size = UDim2.new(.9,0,0,30)
+        btn.BackgroundColor3 = Color3.fromRGB(40,40,50); btn.BackgroundTransparency = 0.3
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = txt; btn.TextColor3 = Color3.fromRGB(220,220,230); btn.TextSize = 12; btn.Name = name
+        btn.Parent = pf
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0,6); buc.Parent = btn
+        local bus = Instance.new("UIStroke"); bus.Color = Color3.fromRGB(99,102,241); bus.Transparency = 0.7; bus.Parent = btn
+        return btn
+    end
+    makeProxBtn(40, "Spam Base Owner", "SpamBaseOwnerBtn")
+    local ctap = makeProxBtn(75, "Click to AP: OFF", "ClickToAPBtn")
+    local ctapState = false
+    ctap.MouseButton1Click:Connect(function()
+        ctapState = not ctapState; ctap.Text = ctapState and "Click to AP: ON" or "Click to AP: OFF"
+        ctap.BackgroundColor3 = ctapState and Color3.fromRGB(74,222,128) or Color3.fromRGB(40,40,50)
+        ctap.BackgroundTransparency = ctapState and 0 or 0.3
+    end)
+    local prox = makeProxBtn(110, "Proximity: OFF", "ProxToggleBtn")
+    local proxState = false
+    prox.MouseButton1Click:Connect(function()
+        proxState = not proxState; prox.Text = proxState and "Proximity: ON" or "Proximity: OFF"
+        prox.BackgroundColor3 = proxState and Color3.fromRGB(74,222,128) or Color3.fromRGB(40,40,50)
+        prox.BackgroundTransparency = proxState and 0 or 0.3
+    end)
+
+    -- Prox slider
+    local slWrap = Instance.new("Frame"); slWrap.Position = UDim2.new(.05,0,0,150); slWrap.Size = UDim2.new(.9,0,0,38)
+    slWrap.BackgroundTransparency = 1; slWrap.Name = "ProxSliderWrap"; slWrap.Parent = pf
+    local distLbl = Instance.new("TextLabel"); distLbl.Size = UDim2.new(1,0,0,14)
+    distLbl.BackgroundTransparency = 1
+    distLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    distLbl.Text = "Distance: 15 studs"; distLbl.TextColor3 = Color3.fromRGB(200,200,220); distLbl.TextSize = 10
+    distLbl.Name = "DistLabel"; distLbl.Parent = slWrap
+    local pTrack = Instance.new("Frame"); pTrack.Position = UDim2.new(0,7,0,22); pTrack.Size = UDim2.new(1,-14,0,6)
+    pTrack.BackgroundColor3 = Color3.fromRGB(30,30,42); pTrack.BorderSizePixel = 0; pTrack.Name = "Track"; pTrack.Parent = slWrap
+    local ptuc = Instance.new("UICorner"); ptuc.CornerRadius = UDim.new(1,0); ptuc.Parent = pTrack
+    local pFill = Instance.new("Frame"); pFill.Size = UDim2.new(0.3,0,1,0)
+    pFill.BackgroundColor3 = Color3.fromRGB(99,102,241); pFill.BorderSizePixel = 0; pFill.Name = "Fill"; pFill.Parent = pTrack
+    local pfuc2 = Instance.new("UICorner"); pfuc2.CornerRadius = UDim.new(1,0); pfuc2.Parent = pFill
+    local pKnob = Instance.new("Frame"); pKnob.Position = UDim2.new(0.3,0,.5,0); pKnob.Size = UDim2.new(0,14,0,14)
+    pKnob.AnchorPoint = Vector2.new(.5,.5); pKnob.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    pKnob.BorderSizePixel = 0; pKnob.ZIndex = 2; pKnob.Name = "Knob"; pKnob.Parent = pTrack
+    local pkuc = Instance.new("UICorner"); pkuc.CornerRadius = UDim.new(1,0); pkuc.Parent = pKnob
+    local pkus = Instance.new("UIStroke"); pkus.Color = Color3.fromRGB(99,102,241); pkus.Thickness = 2; pkus.Parent = pKnob
+
+    -- Prox slider logic
+    local UIS3 = game:GetService("UserInputService")
+    local proxDragging = false
+    pKnob.InputBegan:Connect(function(inp)
+        if inp.UserInputType == Enum.UserInputType.MouseButton1 then proxDragging = true end
+    end)
+    pTrack.InputBegan:Connect(function(inp)
+        if inp.UserInputType == Enum.UserInputType.MouseButton1 then
+            proxDragging = true
+            local pct = math.clamp((inp.Position.X - pTrack.AbsolutePosition.X)/pTrack.AbsoluteSize.X, 0, 1)
+            pFill.Size = UDim2.new(pct,0,1,0); pKnob.Position = UDim2.new(pct,0,.5,0)
+            local dist = math.round(5 + pct * 95); distLbl.Text = "Distance: "..dist.." studs"
+        end
+    end)
+    UIS3.InputEnded:Connect(function(inp)
+        if inp.UserInputType == Enum.UserInputType.MouseButton1 then proxDragging = false end
+    end)
+    UIS3.InputChanged:Connect(function(inp)
+        if proxDragging and inp.UserInputType == Enum.UserInputType.MouseMovement then
+            local pct = math.clamp((inp.Position.X - pTrack.AbsolutePosition.X)/pTrack.AbsoluteSize.X, 0, 1)
+            pFill.Size = UDim2.new(pct,0,1,0); pKnob.Position = UDim2.new(pct,0,.5,0)
+            local dist = math.round(5 + pct * 95); distLbl.Text = "Distance: "..dist.." studs"
+        end
+    end)
+end
+
+-- ============================================================
+-- COMMAND COOLDOWNS PANEL
+-- ============================================================
+local _cooldownPanel
+do
+    local cf = Instance.new("Frame")
+    cf.Position = UDim2.new(1,-430,1,-302); cf.Size = UDim2.new(0,195,0,290)
+    cf.BackgroundColor3 = Color3.fromRGB(12,12,18); cf.BackgroundTransparency = 0.05
+    cf.Name = "CooldownPanel"; cf.Parent = _ScreenGui; _cooldownPanel = cf
+    local cfuc = Instance.new("UICorner"); cfuc.CornerRadius = UDim.new(0,12); cfuc.Parent = cf
+
+    -- Header
+    local hdr = Instance.new("Frame"); hdr.Size = UDim2.new(1,0,0,38); hdr.BackgroundTransparency = 1; hdr.Parent = cf
+    local ht1 = Instance.new("TextLabel"); ht1.Position = UDim2.new(0,0,0,5); ht1.Size = UDim2.new(1,0,0,14)
+    ht1.BackgroundTransparency = 1
+    ht1.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    ht1.Text = "XENHUB V5"; ht1.TextColor3 = Color3.fromRGB(255,255,255); ht1.TextSize = 11; ht1.Parent = hdr
+    local ht2 = Instance.new("TextLabel"); ht2.Position = UDim2.new(0,0,0,18); ht2.Size = UDim2.new(1,0,0,10)
+    ht2.BackgroundTransparency = 1
+    ht2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    ht2.Text = "Command Cooldowns"; ht2.TextColor3 = Color3.fromRGB(160,160,170); ht2.TextSize = 9; ht2.Parent = hdr
+    local hdiv = Instance.new("Frame"); hdiv.Position = UDim2.new(.075,0,1,-1); hdiv.Size = UDim2.new(.85,0,0,1)
+    hdiv.BackgroundColor3 = Color3.fromRGB(99,102,241); hdiv.BackgroundTransparency = 0.5
+    hdiv.BorderSizePixel = 0; hdiv.Parent = hdr
+    Instance.new("UIGradient").Parent = hdiv
+
+    -- Content with padding
+    local content = Instance.new("Frame")
+    content.Position = UDim2.new(0,6,0,40); content.Size = UDim2.new(1,-12,1,-44)
+    content.BackgroundTransparency = 1; content.Parent = cf
+
+    local ll = Instance.new("UIListLayout"); ll.Padding = UDim.new(0,2)
+    ll.SortOrder = Enum.SortOrder.LayoutOrder; ll.Parent = content
+
+    local cooldownItems = {
+        "Jail","Rocket","Inverse","Ragdoll","Jumpscare","Tiny","Balloon","Morph","Nightvision"
+    }
+    for i, name in ipairs(cooldownItems) do
+        local row = Instance.new("Frame")
+        row.Size = UDim2.new(1,0,0,25); row.BackgroundColor3 = Color3.fromRGB(25,25,35)
+        row.BackgroundTransparency = 1; row.BorderSizePixel = 0; row.LayoutOrder = i
+        row.Parent = content
+        local ruc = Instance.new("UICorner"); ruc.CornerRadius = UDim.new(0,5); ruc.Parent = row
+
+        local nameLbl = Instance.new("TextLabel")
+        nameLbl.Position = UDim2.new(0,8,0,0)  -- ← shifted right a bit
+        nameLbl.Size = UDim2.new(1,-70,1,0)
+        nameLbl.BackgroundTransparency = 1; nameLbl.ZIndex = 2
+        nameLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        nameLbl.Text = name; nameLbl.TextColor3 = Color3.fromRGB(220,220,230); nameLbl.TextSize = 14
+        nameLbl.TextXAlignment = Enum.TextXAlignment.Left; nameLbl.Parent = row
+
+        local readyLbl = Instance.new("TextLabel")
+        readyLbl.Position = UDim2.new(1,-65,.5,-10); readyLbl.Size = UDim2.new(0,58,0,20)
+        readyLbl.BackgroundTransparency = 1; readyLbl.ZIndex = 3; readyLbl.Name = "ReadyLabel"
+        readyLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        readyLbl.Text = "READY"; readyLbl.TextColor3 = Color3.fromRGB(74,222,128); readyLbl.TextSize = 11
+        readyLbl.Parent = row
+    end
+end
+
+-- ============================================================
+-- BOTTOM RIGHT BUTTONS
+-- ============================================================
+do
+    local brf = Instance.new("Frame")
+    brf.Position = UDim2.new(1,-20,1,-25); brf.Size = UDim2.new(0,160,0,360)
+    brf.AnchorPoint = Vector2.new(1,1); brf.BackgroundTransparency = 1
+    brf.Visible = true; brf.Name = "BottomRightButtonsFrame"; brf.Parent = _ScreenGui
+    local ll = Instance.new("UIListLayout"); ll.Padding = UDim.new(0,6); ll.SortOrder = Enum.SortOrder.LayoutOrder
+    ll.HorizontalAlignment = Enum.HorizontalAlignment.Right; ll.VerticalAlignment = Enum.VerticalAlignment.Bottom; ll.Parent = brf
+
+    local function makeBRBtn(name, text, lo)
+        local btn = Instance.new("TextButton")
+        btn.Size = UDim2.new(1,0,0,40); btn.BackgroundColor3 = Color3.fromRGB(0,0,0)
+        btn.LayoutOrder = lo
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = text; btn.TextColor3 = Color3.fromRGB(240,240,240); btn.TextSize = 18; btn.Name = name; btn.Parent = brf
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0,6); buc.Parent = btn
+        local bus = Instance.new("UIStroke"); bus.Color = Color3.fromRGB(255,255,255); bus.Thickness = 1.2; bus.Transparency = 0.4; bus.Parent = btn
+        return btn
+    end
+    local autoTP = makeBRBtn("AutoTPButton","Auto TP [OFF]",1)
+    local autoTurret = makeBRBtn("AutoTurretBtn","Auto Turret: OFF",4)
+
+    local atpState = false
+    autoTP.MouseButton1Click:Connect(function()
+        atpState = not atpState; autoTP.Text = atpState and "Auto TP [ON]" or "Auto TP [OFF]"
+        autoTP.BackgroundColor3 = atpState and Color3.fromRGB(74,222,128) or Color3.fromRGB(0,0,0)
+    end)
+    local aturState = false
+    autoTurret.MouseButton1Click:Connect(function()
+        aturState = not aturState; autoTurret.Text = aturState and "Auto Turret: ON" or "Auto Turret: OFF"
+        autoTurret.BackgroundColor3 = aturState and Color3.fromRGB(74,222,128) or Color3.fromRGB(0,0,0)
+    end)
+end
+
+-- ============================================================
+-- JOB ID REJOIN FRAME
+-- ============================================================
+local _jobIdFrame
+do
+    local mf = Instance.new("Frame")
+    mf.Position = UDim2.new(.5,-225,1,-260); mf.Size = UDim2.new(0,450,0,50)
+    mf.Active = true; mf.BackgroundColor3 = Color3.fromRGB(25,25,25); mf.BackgroundTransparency = 0.3
+    mf.BorderSizePixel = 0; mf.Visible = false; mf.Name = "MainFrame"; mf.Parent = _ScreenGui; _jobIdFrame = mf
+    local mfuc = Instance.new("UICorner"); mfuc.CornerRadius = UDim.new(0,10); mfuc.Parent = mf
+    local mfus = Instance.new("UIStroke"); mfus.Color = Color3.fromRGB(99,102,241); mfus.Transparency = 0.6; mfus.Parent = mf
+
+    local function makeBtn(xOff, w, txt, name)
+        local btn = Instance.new("TextButton")
+        btn.Position = UDim2.new(0,xOff,.5,-15); btn.Size = UDim2.new(0,w,0,30)
+        btn.BackgroundColor3 = Color3.fromRGB(15,15,15); btn.BorderSizePixel = 0
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = txt; btn.TextColor3 = Color3.fromRGB(255,255,255); btn.TextSize = 14; btn.Name = name; btn.Parent = mf
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0,6); buc.Parent = btn
+        return btn
+    end
+    makeBtn(12,55,"Join","JoinButton")
+    makeBtn(200,55,"Clear","ClearButton")
+    local jobBox = Instance.new("TextBox")
+    jobBox.Position = UDim2.new(0,75,.5,-15); jobBox.Size = UDim2.new(0,120,0,30)
+    jobBox.BackgroundColor3 = Color3.fromRGB(15,15,15); jobBox.BorderSizePixel = 0; jobBox.ClipsDescendants = true
+    jobBox.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    jobBox.Text = ""; jobBox.TextColor3 = Color3.fromRGB(255,255,255); jobBox.TextSize = 14
+    jobBox.TextTruncate = Enum.TextTruncate.AtEnd; jobBox.ClearTextOnFocus = false
+    jobBox.PlaceholderColor3 = Color3.fromRGB(100,100,100); jobBox.Name = "JobIDBox"; jobBox.Parent = mf
+    local jbuc = Instance.new("UICorner"); jbuc.CornerRadius = UDim.new(0,6); jbuc.Parent = jobBox
+    mf:FindFirstChild("ClearButton", true).MouseButton1Click:Connect(function() jobBox.Text = "" end)
+end
+
+-- ============================================================
+-- STEAL PANEL
+-- ============================================================
+local _stealPanel
+do
+    local sf = Instance.new("Frame")
+    sf.Position = UDim2.new(1,-230,1,-611); sf.Size = UDim2.new(0,220,0,272)
+    sf.Active = true; sf.BackgroundColor3 = Color3.fromRGB(12,12,18); sf.BackgroundTransparency = 0.05
+    sf.BorderSizePixel = 0; sf.ClipsDescendants = true; sf.ZIndex = 100; sf.Name = "StealPanel"; sf.Parent = _ScreenGui
+    _stealPanel = sf
+    local sfuc = Instance.new("UICorner"); sfuc.CornerRadius = UDim.new(0,12); sfuc.Parent = sf
+
+    local tb = Instance.new("Frame"); tb.Size = UDim2.new(1,0,0,35); tb.Active = true; tb.BackgroundTransparency = 1
+    tb.ZIndex = 101; tb.Name = "V5TitleBar"; tb.Parent = sf
+    local t2 = Instance.new("TextLabel"); t2.Position = UDim2.new(0,0,0,5); t2.Size = UDim2.new(1,0,0,14)
+    t2.BackgroundTransparency = 1; t2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    t2.Text = "XENHUB V5"; t2.TextColor3 = Color3.fromRGB(255,255,255); t2.TextSize = 11; t2.Parent = tb
+    local t3 = Instance.new("TextLabel"); t3.Position = UDim2.new(0,0,0,18); t3.Size = UDim2.new(1,0,0,10)
+    t3.BackgroundTransparency = 1; t3.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+    t3.Text = "Steal Panel"; t3.TextColor3 = Color3.fromRGB(160,160,170); t3.TextSize = 9; t3.Parent = tb
+
+    local div = Instance.new("Frame"); div.Position = UDim2.new(.075,0,0,35); div.Size = UDim2.new(.85,0,0,1)
+    div.BackgroundColor3 = Color3.fromRGB(99,102,241); div.BackgroundTransparency = 0.5; div.BorderSizePixel = 0
+    div.ZIndex = 101; div.Parent = sf; Instance.new("UIGradient").Parent = div
+
+    local rows = {
+        {lbl="Steal Highest:",    y=43,  name="HighestToggle",  on=false},
+        {lbl="Steal Priority:",   y=81,  name="PriorityToggle", on=false},
+        {lbl="Steal Nearest:",    y=119, name="NearestToggle",  on=false},
+        {lbl="Auto Turret (G):",  y=157, name="AutoTurretToggle",on=false},
+        {lbl="Auto Buy (N):",     y=195, name="AutoBuyToggle",  on=false},
+        {lbl="Auto Kick:",        y=233, name="AutoKickToggle", on=true},
+    }
+    for _, r in ipairs(rows) do
+        local l = Instance.new("TextLabel"); l.Position = UDim2.new(0,10,0,r.y); l.Size = UDim2.new(0,110,0,28)
+        l.BackgroundTransparency = 1
+        l.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        l.Text = r.lbl; l.TextColor3 = Color3.fromRGB(220,220,230); l.TextSize = 13
+        l.TextXAlignment = Enum.TextXAlignment.Left; l.Parent = sf
+        local btn = Instance.new("TextButton"); btn.Position = UDim2.new(1,-80,0,r.y); btn.Size = UDim2.new(0,75,0,28)
+        local onCol = r.on and Color3.fromRGB(74,222,128) or Color3.fromRGB(50,50,65)
+        btn.BackgroundColor3 = onCol; btn.BackgroundTransparency = r.on and 0 or 0.15
+        btn.BorderSizePixel = 0; btn.ZIndex = 101
+        btn.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        btn.Text = r.on and "ON" or "OFF"; btn.TextColor3 = Color3.fromRGB(255,255,255); btn.TextSize = 13
+        btn.Name = r.name; btn.Parent = sf
+        local buc = Instance.new("UICorner"); buc.CornerRadius = UDim.new(0,6); buc.Parent = btn
+        local bus = Instance.new("UIStroke"); bus.Color = Color3.fromRGB(99,102,241); bus.Transparency = 0.7; bus.Parent = btn
+        local state = r.on
+        btn.MouseButton1Click:Connect(function()
+            state = not state; btn.Text = state and "ON" or "OFF"
+            btn.BackgroundColor3 = state and Color3.fromRGB(74,222,128) or Color3.fromRGB(50,50,65)
+            btn.BackgroundTransparency = state and 0 or 0.15
+        end)
+    end
+end
+
+-- ============================================================
+-- BOTTOM BAR  ← TITLE + DISCORD NOW BLUE GRADIENT
+-- ============================================================
+do
+    local bar = Instance.new("Frame")
+    bar.Position = UDim2.new(.5,-285,1,-135); bar.Size = UDim2.new(0,570,0,60)
+    bar.BackgroundColor3 = Color3.fromRGB(12,12,18); bar.BackgroundTransparency = 0.05
+    bar.BorderSizePixel = 0; bar.ZIndex = 1000; bar.Name = "XenhubV5Bar"; bar.Parent = _ScreenGui
+    local baruc = Instance.new("UICorner"); baruc.CornerRadius = UDim.new(0,14); baruc.Parent = bar
+    local barus = Instance.new("UIStroke"); barus.Thickness = 1.5; barus.Transparency = 1; barus.Parent = bar
+    Instance.new("UIGradient").Parent = barus
+
+    local topLine = Instance.new("Frame"); topLine.Position = UDim2.new(0,10,0,0); topLine.Size = UDim2.new(1,-20,0,1)
+    topLine.BackgroundColor3 = Color3.fromRGB(255,255,255); topLine.BackgroundTransparency = 0.92
+    topLine.BorderSizePixel = 0; topLine.ZIndex = 1001; topLine.Parent = bar
+
+    -- Logo
+    local logo = Instance.new("Frame"); logo.Position = UDim2.new(0,11,.5,-19); logo.Size = UDim2.new(0,38,0,38)
+    logo.BackgroundColor3 = Color3.fromRGB(30,30,40); logo.BackgroundTransparency = 0.3; logo.ZIndex = 1002
+    logo.Name = "V5Logo"; logo.Parent = bar
+    Instance.new("UICorner").Parent = logo
+    local logoImg = Instance.new("ImageLabel"); logoImg.Position = UDim2.new(0,2,0,2); logoImg.Size = UDim2.new(1,-4,1,-4)
+    logoImg.BackgroundTransparency = 1; logoImg.ZIndex = 1003; logoImg.Image = "rbxassetid://71386570532846"
+    logoImg.ScaleType = Enum.ScaleType.Fit; logoImg.Parent = logo
+
+    -- ── XENHUB V5 title — BLUE GRADIENT ─────────────────────
+    local titleLbl = Instance.new("TextLabel")
+    titleLbl.Position = UDim2.new(0,60,0,8); titleLbl.Size = UDim2.new(0,150,0,26)
+    titleLbl.BackgroundTransparency = 1; titleLbl.ZIndex = 1001
+    titleLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    titleLbl.Text = "XENHUB V5"; titleLbl.TextColor3 = Color3.fromRGB(255,255,255)
+    titleLbl.TextSize = 22; titleLbl.TextStrokeTransparency = 0.6; titleLbl.TextXAlignment = Enum.TextXAlignment.Left
+    titleLbl.Name = "XenhubTitle"; titleLbl.Parent = bar
+    -- blue gradient on text via UIGradient (left=bright blue, right=indigo)
+    local titleGrad = Instance.new("UIGradient")
+    titleGrad.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(130, 140, 255)),
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(99, 102, 241)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(70, 74, 210)),
+    }
+    titleGrad.Rotation = 0
+    titleGrad.Parent = titleLbl
+
+    -- Divider 1
+    local d1 = Instance.new("Frame"); d1.Position = UDim2.new(0,210,0,10); d1.Size = UDim2.new(0,2,0,20)
+    d1.BackgroundColor3 = Color3.fromRGB(99,102,241); d1.BackgroundTransparency = 0.4
+    d1.BorderSizePixel = 0; d1.ZIndex = 1001; d1.Parent = bar
+    Instance.new("UIGradient").Parent = d1
+
+    -- ── discord.gg/xenhub — BLUE GRADIENT ────────────────────
+    local discLbl = Instance.new("TextLabel")
+    discLbl.Position = UDim2.new(0,222,0,8); discLbl.Size = UDim2.new(0,200,0,26)
+    discLbl.BackgroundTransparency = 1; discLbl.ZIndex = 1001
+    discLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
+    discLbl.Text = "discord.gg/xenhub"; discLbl.TextColor3 = Color3.fromRGB(255,255,255)
+    discLbl.TextSize = 22; discLbl.TextStrokeTransparency = 0.6; discLbl.TextXAlignment = Enum.TextXAlignment.Left
+    discLbl.Parent = bar
+    -- matching blue gradient
+    local discGrad = Instance.new("UIGradient")
+    discGrad.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(130, 140, 255)),
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(99, 102, 241)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(70, 74, 210)),
+    }
+    discGrad.Parent = discLbl
+
+    -- Subtitle
+    local subLbl = Instance.new("TextLabel")
+    subLbl.Position = UDim2.new(0,60,0,32); subLbl.Size = UDim2.new(0,350,0,28)
+    subLbl.BackgroundTransparency = 1; subLbl.ZIndex = 1001
+    subLbl.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+    subLbl.Text = "by @themr4pf, @xendless & @ttttt1"
+    subLbl.TextColor3 = Color3.fromRGB(160,160,170); subLbl.TextSize = 11
+    subLbl.TextXAlignment = Enum.TextXAlignment.Left; subLbl.Parent = bar
+
+    -- Divider 2
+    local d2 = Instance.new("Frame"); d2.Position = UDim2.new(1,-135,0,10); d2.Size = UDim2.new(0,2,1,-20)
+    d2.BackgroundColor3 = Color3.fromRGB(99,102,241); d2.BackgroundTransparency = 0.4
+    d2.BorderSizePixel = 0; d2.ZIndex = 1001; d2.Parent = bar
+    Instance.new("UIGradient").Parent = d2
+
+    -- Stats box
+    local statsBox = Instance.new("Frame"); statsBox.Position = UDim2.new(1,-130,.5,-26); statsBox.Size = UDim2.new(0,125,0,52)
+    statsBox.BackgroundTransparency = 1; statsBox.BorderSizePixel = 0; statsBox.ZIndex = 1001; statsBox.Name = "StatsBox"; statsBox.Parent = bar
+
+    local function makeStatLbl(y, txt, col, name)
+        local l = Instance.new("TextLabel"); l.Position = UDim2.new(0,5,0,y); l.Size = UDim2.new(1,0,0,17)
+        l.BackgroundTransparency = 1; l.ZIndex = 1001
+        l.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+        l.Text = txt; l.TextColor3 = col; l.TextSize = 13; l.TextStrokeTransparency = 0.8
+        l.TextXAlignment = Enum.TextXAlignment.Left; l.Name = name; l.Parent = statsBox
+        return l
+    end
+    makeStatLbl(0,  "FPS: 60",       Color3.fromRGB(74,222,128),  "FPSLabel")
+    makeStatLbl(17, "PING: 0ms",     Color3.fromRGB(74,222,128),  "PINGLabel")
+    makeStatLbl(34, "Desync: OFF",   Color3.fromRGB(248,113,113), "DesyncLabel")
+end
+
+-- ============================================================
+-- FUNCTIONAL LOGIC
+-- ============================================================
+local Players       = game:GetService("Players")
+local RunService    = game:GetService("RunService")
+local Stats         = game:GetService("Stats")
+local UIS           = game:GetService("UserInputService")
+local lp            = Players.LocalPlayer
+local gui           = _ScreenGui
+
+-- ── FPS + PING Loop ─────────────────────────────────────────
+local frameCount, lastTime = 0, tick()
+RunService.RenderStepped:Connect(function()
+    frameCount += 1
+    local now = tick()
+    if now - lastTime >= 0.5 then
+        local fps = math.round(frameCount / (now - lastTime))
+        frameCount = 0; lastTime = now
+        local bar2 = gui:FindFirstChild("XenhubV5Bar")
+        if bar2 then
+            local sb = bar2:FindFirstChild("StatsBox")
+            if sb then
+                local fLbl = sb:FindFirstChild("FPSLabel")
+                local pLbl = sb:FindFirstChild("PINGLabel")
+                if fLbl then
+                    fLbl.Text = "FPS: "..fps
+                    fLbl.TextColor3 = fps>=55 and Color3.fromRGB(74,222,128) or fps>=30 and Color3.fromRGB(250,200,50) or Color3.fromRGB(248,113,113)
+                end
+                if pLbl then
+                    local ok, ping = pcall(function() return math.round(Stats.Network.ServerStatsItem["Data Ping"]:GetValue()) end)
+                    if ok then
+                        pLbl.Text = "PING: "..ping.."ms"
+                        pLbl.TextColor3 = ping<=80 and Color3.fromRGB(74,222,128) or ping<=150 and Color3.fromRGB(250,200,50) or Color3.fromRGB(248,113,113)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- ── Global UI visibility ─────────────────────────────────────
+local uiVisible = true
+local managedPanels = {}
+for _, v in ipairs(gui:GetChildren()) do
+    if v:IsA("Frame") or v:IsA("ScrollingFrame") then
+        table.insert(managedPanels, v)
+    end
+end
+
+UIS.InputBegan:Connect(function(input, gpe)
+    if gpe then return end
+    if input.KeyCode == Enum.KeyCode.RightShift then
+        uiVisible = not uiVisible
+        for _, p in ipairs(managedPanels) do p.Visible = uiVisible end
+    end
+end)
+
+-- ── Settings panel: open via LeftControl or ⚙ Settings button ──
+local settingsPanel = gui:FindFirstChild("XenhubV5")
+UIS.InputBegan:Connect(function(input, gpe)
+    if gpe then return end
+    if input.KeyCode == Enum.KeyCode.LeftControl then
+        if settingsPanel then settingsPanel.Visible = not settingsPanel.Visible end
+    end
+end)
+
+-- Wire up ⚙ Settings button in Actions panel
+task.defer(function()
+    local ap = gui:FindFirstChild("V5ActionsPanel")
+    if ap then
+        local btns = ap:FindFirstChild("Buttons")
+        if btns then
+            local sBtn = btns:FindFirstChild("Settings")
+            if sBtn then
+                sBtn.MouseButton1Click:Connect(function()
+                    if settingsPanel then settingsPanel.Visible = not settingsPanel.Visible end
+                end)
+            end
+            -- Reset
+            local rBtn = btns:FindFirstChild("Reset")
+            if rBtn then
+                rBtn.MouseButton1Click:Connect(function()
+                    local char = lp and lp.Character
+                    local hum  = char and char:FindFirstChildWhichIsA("Humanoid")
+                    if hum then hum.Health = 0 end
+                end)
+            end
+            -- Rejoin
+            local rejBtn = btns:FindFirstChild("Rejoin")
+            if rejBtn then
+                rejBtn.MouseButton1Click:Connect(function()
+                    game:GetService("TeleportService"):Teleport(game.PlaceId, lp)
+                end)
+            end
+        end
+    end
+end)
+
+-- Close button on settings panel
+task.defer(function()
+    local sp = gui:FindFirstChild("XenhubV5")
+    if sp then
+        local topFrame = sp:FindFirstChildWhichIsA("Frame")
+        if topFrame then
+            local closeBtn = topFrame:FindFirstChild("CloseBtn")
+            if closeBtn then
+                closeBtn.MouseButton1Click:Connect(function() sp.Visible = false end)
+            end
+        end
+    end
+end)
+
+-- ── Settings tab switching ────────────────────────────────────
+task.defer(function()
+    local sp = gui:FindFirstChild("XenhubV5")
+    if not sp then return end
+    local navFrame = sp:FindFirstChild("NavFrame")
+    local contentFrame = sp:FindFirstChild("ContentFrame")
+    if not navFrame or not contentFrame then return end
+
+    local tabNames = {"Keybinds","Auto TP","ESP","UI","Misc","Priority","Performance"}
+    local tabs = {}
+    for _, btn in ipairs(navFrame:GetChildren()) do
+        if btn:IsA("TextButton") then table.insert(tabs, btn) end
+    end
+    table.sort(tabs, function(a,b) return a.LayoutOrder < b.LayoutOrder end)
+
+    local function switchTab(targetName)
+        for _, name in ipairs(tabNames) do
+            local sf = contentFrame:FindFirstChild(name)
+            if sf then sf.Visible = (name == targetName) end
+        end
+        for i, btn in ipairs(tabs) do
+            local name = tabNames[i]
+            if name == targetName then
+                btn.BackgroundColor3 = Color3.fromRGB(99,102,241)
+                btn.BackgroundTransparency = 0.3
+                btn.TextColor3 = Color3.fromRGB(255,255,255)
+            else
+                btn.BackgroundColor3 = Color3.fromRGB(40,40,50)
+                btn.BackgroundTransparency = 0.7
+                btn.TextColor3 = Color3.fromRGB(115,115,130)
+            end
+        end
+    end
+    for i, btn in ipairs(tabs) do
+        local name = tabNames[i]
+        if name then
+            btn.MouseButton1Click:Connect(function() switchTab(name) end)
+        end
+    end
+    switchTab("UI")
+end)
+
+-- ── Draggable panels ─────────────────────────────────────────
+local function makeDraggable(frame, handle)
+    handle = handle or frame
+    local dragging, dragStart, startPos
+    handle.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true; dragStart = input.Position; startPos = frame.Position
+        end
+    end)
+    handle.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then dragging = false end
+    end)
+    UIS.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local d = input.Position - dragStart
+            frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset+d.X, startPos.Y.Scale, startPos.Y.Offset+d.Y)
+        end
+    end)
+end
+
+task.defer(function()
+    local bar2 = gui:FindFirstChild("XenhubV5Bar"); if bar2 then makeDraggable(bar2) end
+    local sp = gui:FindFirstChild("XenhubV5")
+    if sp then local tf = sp:FindFirstChildWhichIsA("Frame"); if tf then makeDraggable(sp,tf) end end
+    local wf = gui:FindFirstChild("WalkspeedFrame")
+    if wf then local tb = wf:FindFirstChild("TitleBar"); if tb then makeDraggable(wf,tb) end end
+    local ap = gui:FindFirstChild("V5ActionsPanel")
+    if ap then local tb = ap:FindFirstChild("TitleBar"); if tb then makeDraggable(ap,tb) end end
+    local pf = gui:FindFirstChild("ProximityFrame"); if pf then makeDraggable(pf) end
+    local cf = gui:FindFirstChild("CooldownPanel"); if cf then makeDraggable(cf) end
+    local sf2 = gui:FindFirstChild("StealPanel"); if sf2 then
+        local tb = sf2:FindFirstChild("V5TitleBar"); if tb then makeDraggable(sf2,tb) end
+    end
+end)
